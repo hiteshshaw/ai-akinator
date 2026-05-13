@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>IPL Akinator — Guess Your Player</title>
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -65,13 +65,8 @@
 
     <!-- Akinator character -->
     <div class="pitch-right">
-      <div class="akinator-char">
-        <div class="char-turban"></div>
-        <div class="char-head" id="charHead">🤖</div>
-        <div class="char-body"></div>
-        <div class="char-bat"></div>
-      </div>
-      <div class="speech-bubble">Think of an IPL player,<br>I will guess who it is! 🏏</div>
+      <div class="speech-bubble" style="margin-bottom: 20px;">Think of an IPL player,<br>I will guess who it is! 🏏</div>
+      <img src="../assets/akinator_robot.png" class="akinator-img" alt="IPL Akinator Robot">
     </div>
 
     <!-- Decorative stumps right -->
@@ -79,6 +74,15 @@
       <div class="stump"></div><div class="stump"></div><div class="stump"></div>
       <div class="bail bail-top"></div><div class="bail bail-bot"></div>
     </div>
+  </div>
+
+  <!-- Trust Badges -->
+  <div class="trust-badges">
+    <div class="trust-badge"><span class="tb-icon">🛡️</span> 100% SAFE & PRIVATE</div>
+    <div class="trust-badge divider"></div>
+    <div class="trust-badge"><span class="tb-icon">⚡</span> INSTANT AI ANALYSIS</div>
+    <div class="trust-badge divider"></div>
+    <div class="trust-badge"><span class="tb-icon">🔒</span> BUILT ON GEMINI AI</div>
   </div>
 
   <!-- DRS / Hawkeye prediction ticker -->
@@ -283,6 +287,7 @@
         <input type="text" class="wf-input" id="wfInput" placeholder="Type the player's full name…" autocomplete="off"/>
         <button class="wf-submit" onclick="submitCorrection()">➕ SUBMIT &amp; UPDATE DATABASE</button>
         <div class="wf-msg" id="wfMsg"></div>
+        <div id="comparisonBox" class="comparison-box" style="display:none"></div>
       </div>
     </div>
   </div>
@@ -356,6 +361,8 @@ function startGame() {
   document.getElementById('historyList').innerHTML = '';
   document.getElementById('wrongFlow').style.display  = 'none';
   document.getElementById('wfMsg').style.display      = 'none';
+  const cb = document.getElementById('comparisonBox');
+  if (cb) cb.style.display = 'none';
   document.getElementById('wfInput').value            = '';
   updateConfUI(0);
   updateCandUI(PLAYERS.length);
@@ -483,10 +490,12 @@ function showWrongFlow() {
 async function submitCorrection() {
   const raw  = document.getElementById('wfInput').value.trim();
   const msg  = document.getElementById('wfMsg');
+  const compBox = document.getElementById('comparisonBox');
   if (!raw) return;
 
   const guessed = document.getElementById('resName').textContent;
   msg.style.display = 'none';
+  if (compBox) compBox.style.display = 'none';
 
   // Save correction log regardless
   saveCorrection(guessed, raw, G.history);
@@ -497,8 +506,35 @@ async function submitCorrection() {
   if (existing) {
     // Player IS already in DB
     msg.className   = 'wf-msg info';
-    msg.textContent = `ℹ️  "${existing.name}" is already in our database! The AI will improve its reasoning based on this session.`;
+    msg.textContent = `ℹ️  "${existing.name}" is already in our database! Here is where we disagreed:`;
     msg.style.display = 'block';
+
+    if (compBox) {
+        let compHtml = `<div class="comp-title">Answers comparison for ${existing.name}</div><div class="comp-grid">`;
+        G.history.forEach((h, idx) => {
+            const attrObj = ATTRIBUTES.find(a => a.key === h.attr);
+            const attrLabel = attrObj ? attrObj.label : h.attr;
+            const dbVal = getAttrValue(existing, h.attr);
+            const dbRespStr = dbVal ? "Yes" : "No";
+            const userRespStr = h.resp === 'dk' ? "Don't Know" : h.resp.charAt(0).toUpperCase() + h.resp.slice(1);
+            
+            let isMatch = false;
+            if (h.resp === 'yes' && dbVal) isMatch = true;
+            if (h.resp === 'no' && !dbVal) isMatch = true;
+            if (h.resp === 'maybe' || h.resp === 'dk') isMatch = true;
+            
+            compHtml += `<div class="comp-row ${isMatch ? 'match' : 'mismatch'}">
+                <div class="comp-attr">Q${idx+1}: Is the player ${attrLabel}?</div>
+                <div class="comp-vals">
+                    <span class="comp-user">You said: <b>${userRespStr}</b></span>
+                    <span class="comp-db">DB says: <b>${dbRespStr}</b></span>
+                </div>
+            </div>`;
+        });
+        compHtml += `</div>`;
+        compBox.innerHTML = compHtml;
+        compBox.style.display = 'block';
+    }
   } else {
     // Player NOT in DB — add them
     msg.className   = 'wf-msg info';
@@ -527,15 +563,21 @@ function showThinking() {
   document.getElementById('aiBubble').innerHTML =
     '<div class="think-dots"><div class="t-dot d1"></div><div class="t-dot d2"></div><div class="t-dot d3"></div></div>';
   document.getElementById('aiAvatar').textContent = '🤔';
-  document.getElementById('charHead').textContent  = '🤔';
-  document.getElementById('charHead').classList.add('thinking');
+  const charHead = document.getElementById('charHead');
+  if (charHead) {
+    charHead.textContent  = '🤔';
+    charHead.classList.add('thinking');
+  }
 }
 function showQuestion(q, num) {
   document.getElementById('aiBubble').innerHTML =
     `<span class="q-badge">Q${num}</span><span>${q}</span>`;
   document.getElementById('aiAvatar').textContent = '🤖';
-  document.getElementById('charHead').textContent  = '🤖';
-  document.getElementById('charHead').classList.remove('thinking');
+  const charHead = document.getElementById('charHead');
+  if (charHead) {
+    charHead.textContent  = '🤖';
+    charHead.classList.remove('thinking');
+  }
 }
 function setAnswersEnabled(on) {
   ['btn-yes','btn-no','btn-maybe','btn-dk'].forEach(id => {

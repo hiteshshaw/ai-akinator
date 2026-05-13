@@ -27,11 +27,12 @@ const FALLBACK_QUESTIONS = {
 
 async function generateQuestion(attrKey, attrLabel, topNames, candidateCount, questionNum) {
   const prompt = `You are the IPL Akinator — a dramatic, energetic cricket quiz game-show host.
-You are on question ${questionNum} of 12. You need to ask about this trait: "${attrLabel}".
+You are on question ${questionNum} of 12. You need to ask about this trait: "${attrLabel}" (Internal key: ${attrKey}).
 Top suspects right now: ${topNames}. Players still in the game: ${candidateCount}.
 
-Write ONE short, exciting question about this trait.
-Rules:
+Write ONE short, exciting question to ask if the player has this trait.
+CRITICAL RULES:
+- VARY YOUR PHRASING WILDLY! Do not use the same sentence structures repeatedly.
 - Maximum 18 words
 - Do NOT mention any player name
 - Be dramatic and fun like a cricket commentator on a big final night
