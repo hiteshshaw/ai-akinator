@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>IPL Akinator — Guess Your Player</title>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+<div class="bg-glow g1"></div>
+<div class="bg-glow g2"></div>
+<div class="bg-glow g3"></div>
+<canvas id="confettiCanvas"></canvas>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="logo">
+    <div>
+      <div class="logo-text"><span class="ipl">IPL </span><span class="ak">AKINATOR</span></div>
+      <div class="logo-sub">AI POWERED · GEMINI</div>
+    </div>
+  </div>
+  <div class="nav-status"><div class="live-dot"></div>AI Engine Online</div>
+  <div class="nav-right">
+    <button class="nav-btn" onclick="showLeaderboard()">🏆 LEADERBOARD</button>
+    <button class="nav-btn" onclick="showScreen('home')">🏠 HOME</button>
+  </div>
+</nav>
+
+<!-- ══════════════ HOME ══════════════ -->
+<div id="home" class="screen active">
+
+  <!-- Hero pitch banner -->
+  <div class="pitch-hero">
+    <div class="pitch-glow-ball"></div>
+
+    <!-- Decorative stumps left -->
+    <div class="stumps-deco stumps-left">
+      <div class="stump"></div><div class="stump"></div><div class="stump"></div>
+      <div class="bail bail-top"></div><div class="bail bail-bot"></div>
+    </div>
+
+    <div class="pitch-left">
+      <div class="hero-tag">🏏 IPL CRICKET MIND READER · POWERED BY GEMINI AI</div>
+      <h1 class="hero-title">
+        <span class="w1">I WILL</span>
+        <span class="w2">GUESS YOUR</span>
+        <span class="w3">IPL PLAYER!</span>
+      </h1>
+      <p class="hero-sub">Think of any IPL cricketer from any season. The Gemini-powered AI will analyse your answers and identify the player in 8–12 smart questions.</p>
+      <div class="hero-stats">
+        <div class="hst"><div class="hst-num c1">250+</div><div class="hst-lbl">Players</div></div>
+        <div class="hst"><div class="hst-num c2">AI</div><div class="hst-lbl">Gemini Brain</div></div>
+        <div class="hst"><div class="hst-num c3">8–12</div><div class="hst-lbl">Questions</div></div>
+        <div class="hst"><div class="hst-num c4">17+</div><div class="hst-lbl">IPL Seasons</div></div>
+      </div>
+      <button class="play-btn" onclick="startGame()">
+        <span>▶</span> PLAY NOW
+      </button>
+      <p class="hero-note">🎯 Challenge the AI — can you confuse it?</p>
+    </div>
+
+    <!-- Akinator character -->
+    <div class="pitch-right">
+      <div class="akinator-char">
+        <div class="char-turban"></div>
+        <div class="char-head" id="charHead">🤖</div>
+        <div class="char-body"></div>
+        <div class="char-bat"></div>
+      </div>
+      <div class="speech-bubble">Think of an IPL player,<br>I will guess who it is! 🏏</div>
+    </div>
+
+    <!-- Decorative stumps right -->
+    <div class="stumps-deco stumps-right">
+      <div class="stump"></div><div class="stump"></div><div class="stump"></div>
+      <div class="bail bail-top"></div><div class="bail bail-bot"></div>
+    </div>
+  </div>
+
+  <!-- DRS / Hawkeye prediction ticker -->
+  <div class="drs-ticker">
+    <div class="drs-label">🎯 HAWKEYE PREDICTION</div>
+    <div class="drs-items" id="drsTicker">
+      <div class="drs-item">MS Dhoni · <span class="drs-conf">94%</span></div>
+      <div class="drs-item">Virat Kohli · <span class="drs-conf">88%</span></div>
+      <div class="drs-item">Rohit Sharma · <span class="drs-conf">91%</span></div>
+      <div class="drs-item">Jasprit Bumrah · <span class="drs-conf">86%</span></div>
+      <div class="drs-item">AB de Villiers · <span class="drs-conf">89%</span></div>
+      <div class="drs-item">Hardik Pandya · <span class="drs-conf">83%</span></div>
+    </div>
+  </div>
+
+  <!-- Feature cards -->
+  <div class="features-grid">
+    <div class="feat-card">
+      <span class="feat-icon">👥</span>
+      <div class="feat-title">250+ Players</div>
+      <div class="feat-desc">From IPL legends to modern superstars. Every season, every franchise covered.</div>
+    </div>
+    <div class="feat-card">
+      <span class="feat-icon">🧠</span>
+      <div class="feat-title">Gemini AI Brain</div>
+      <div class="feat-desc">Dynamic questions powered by Google Gemini and probability reasoning.</div>
+    </div>
+    <div class="feat-card">
+      <span class="feat-icon">📊</span>
+      <div class="feat-title">Live Stats</div>
+      <div class="feat-desc">Track real-time confidence, entropy reduction and candidate pool.</div>
+    </div>
+    <div class="feat-card">
+      <span class="feat-icon">🏏</span>
+      <div class="feat-title">Self-Learning DB</div>
+      <div class="feat-desc">Wrong guess? Add the player! The database grows with every correction.</div>
+    </div>
+  </div>
+
+  <!-- How to play -->
+  <div class="how-section">
+    <div class="section-heading">HOW TO PLAY</div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="step-icon-ring">🤔</div>
+        <div class="step-title">Think</div>
+        <div class="step-desc">Pick any IPL player from any season in your mind</div>
+      </div>
+      <div class="how-step">
+        <div class="step-icon-ring">💬</div>
+        <div class="step-title">Answer</div>
+        <div class="step-desc">Respond Yes / No / Maybe / Don't Know to AI questions</div>
+      </div>
+      <div class="how-step">
+        <div class="step-icon-ring">🔍</div>
+        <div class="step-title">Analyze</div>
+        <div class="step-desc">AI narrows the 250+ player pool in real time</div>
+      </div>
+      <div class="how-step">
+        <div class="step-icon-ring">🏆</div>
+        <div class="step-title">Guess</div>
+        <div class="step-desc">AI reveals your player — rate its accuracy!</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /home -->
+
+<!-- ══════════════ GAME ══════════════ -->
+<div id="game" class="screen">
+  <!-- LEFT -->
+  <div class="game-left">
+
+    <!-- Progress -->
+    <div class="prog-wrap">
+      <div class="prog-top">
+        <span class="prog-label">Question Progress</span>
+        <span class="prog-val" id="pbVal">0 / 12</span>
+      </div>
+      <div class="prog-track"><div class="prog-fill" id="pbFill"></div></div>
+    </div>
+
+    <!-- Confidence + Candidates -->
+    <div class="conf-row">
+      <div class="conf-card">
+        <div class="cc-icon">🎯</div>
+        <div class="cc-body">
+          <div class="cc-label">Confidence</div>
+          <div class="cc-value" id="confVal" style="color:var(--blue2)">0%</div>
+          <div class="cc-bar"><div class="cc-bar-fill conf-fill" id="confBarFill" style="width:0%"></div></div>
+        </div>
+      </div>
+      <div class="conf-card">
+        <div class="cc-icon">👥</div>
+        <div class="cc-body">
+          <div class="cc-label">Candidates Left</div>
+          <div class="cc-value" id="candVal" style="color:var(--blue2)">248</div>
+          <div class="cc-bar"><div class="cc-bar-fill cand-fill" id="candBarFill" style="width:0%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Chat -->
+    <div class="ai-chat">
+      <div class="ai-avatar-wrap">
+        <div class="ai-ring r1"></div>
+        <div class="ai-ring r2"></div>
+        <div class="ai-avatar" id="aiAvatar">🤖</div>
+      </div>
+      <div class="ai-bubble" id="aiBubble">
+        <div class="think-dots">
+          <div class="t-dot d1"></div>
+          <div class="t-dot d2"></div>
+          <div class="t-dot d3"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Answer Buttons — no JS .active class, CSS :hover only -->
+    <div class="answer-grid" id="answerGrid">
+      <button class="ans-btn ans-yes"   id="btn-yes"   onclick="answer('yes')">
+        <span class="ans-emoji">✅</span><span class="ans-text">Yes, definitely!</span><span class="ans-key">Y</span>
+      </button>
+      <button class="ans-btn ans-no"    id="btn-no"    onclick="answer('no')">
+        <span class="ans-emoji">❌</span><span class="ans-text">No, not at all</span><span class="ans-key">N</span>
+      </button>
+      <button class="ans-btn ans-maybe" id="btn-maybe" onclick="answer('maybe')">
+        <span class="ans-emoji">🤷</span><span class="ans-text">Maybe / Partially</span><span class="ans-key">M</span>
+      </button>
+      <button class="ans-btn ans-dk"    id="btn-dk"    onclick="answer('dk')">
+        <span class="ans-emoji">❓</span><span class="ans-text">Don't Know</span><span class="ans-key">D</span>
+      </button>
+    </div>
+    <div class="kb-hint">Keyboard: &nbsp;<b>Y</b> = Yes &nbsp;|&nbsp; <b>N</b> = No &nbsp;|&nbsp; <b>M</b> = Maybe &nbsp;|&nbsp; <b>D</b> = Don't Know</div>
+
+    <!-- History -->
+    <div class="history-wrap" id="historyWrap" style="display:none">
+      <div class="block-label">📜 Question History</div>
+      <div id="historyList"></div>
+    </div>
+
+  </div><!-- /game-left -->
+
+  <!-- RIGHT sidebar -->
+  <div class="game-right">
+    <div class="side-stat">
+      <div class="ss-icon">❓</div>
+      <div><div class="ss-val" id="qNumDisp">1</div><div class="ss-lbl">Question No.</div></div>
+    </div>
+    <div class="side-stat">
+      <div class="ss-icon">🔥</div>
+      <div><div class="ss-val" id="entropyDisp" style="color:var(--orange)">0%</div><div class="ss-lbl">Entropy Reduced</div></div>
+    </div>
+    <div class="side-stat">
+      <div class="ss-icon">📦</div>
+      <div><div class="ss-val" id="dbSizeDisp" style="color:var(--teal)">248</div><div class="ss-lbl">Players in DB</div></div>
+    </div>
+
+    <div class="cand-panel">
+      <div class="block-label" style="margin-bottom:14px">🎯 Top Suspects</div>
+      <div id="candList">
+        <div style="text-align:center;color:var(--muted);padding:24px;font-size:13px">Awaiting first answer…</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /game -->
+
+<!-- ══════════════ RESULT ══════════════ -->
+<div id="result" class="screen">
+  <div class="result-outer">
+    <div class="result-card">
+      <span class="trophy-wrap">🏆</span>
+      <div class="res-label">You were thinking of…</div>
+      <div class="res-name"  id="resName">MS Dhoni</div>
+      <div class="res-badge" id="resBadge">WK-Batsman · CSK</div>
+
+      <div class="res-conf-row">
+        <div class="res-conf-num" id="resConf">85%</div>
+        <div class="res-conf-lbl">Confidence</div>
+      </div>
+      <div class="res-conf-bar-wrap">
+        <div class="res-conf-bar" id="resConfBar" style="width:0%"></div>
+      </div>
+
+      <div class="res-stats-grid">
+        <div class="rs-box"><div class="rs-num" id="rsQ" style="color:var(--blue2)">8</div><div class="rs-lbl">Questions</div></div>
+        <div class="rs-box"><div class="rs-num" id="rsC" style="color:var(--gold)">3</div><div class="rs-lbl">Candidates</div></div>
+        <div class="rs-box"><div class="rs-num" id="rsS" style="color:var(--green)">9.1</div><div class="rs-lbl">Score</div></div>
+      </div>
+      <div class="res-teams" id="resTeams">Teams: <strong>—</strong></div>
+
+      <div class="res-actions">
+        <button class="r-btn primary"   onclick="startGame()">🔄 Play Again</button>
+        <button class="r-btn secondary" onclick="showLeaderboard()">🏆 Leaderboard</button>
+        <button class="r-btn danger"    onclick="showWrongFlow()">❌ Wrong Guess?</button>
+      </div>
+
+      <!-- Wrong flow -->
+      <div class="wrong-flow" id="wrongFlow" style="display:none">
+        <div class="wf-title">❌ Who were you actually thinking of?</div>
+        <input type="text" class="wf-input" id="wfInput" placeholder="Type the player's full name…" autocomplete="off"/>
+        <button class="wf-submit" onclick="submitCorrection()">➕ SUBMIT &amp; UPDATE DATABASE</button>
+        <div class="wf-msg" id="wfMsg"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ LEADERBOARD ══════════════ -->
+<div id="leaderboard" class="screen">
+  <div class="lb-head">
+    <div class="lb-title">🏆 Leaderboard</div>
+    <button class="back-btn" onclick="showScreen('home')">← Back</button>
+  </div>
+  <div id="lbBody"></div>
+</div>
+
+<!-- ══════════════ SCRIPTS ══════════════ -->
+<script src="../engine/probabilityEngine.js"></script>
+<script src="../brain/aiBrain.js"></script>
+<script src="../backend/gameSession.js"></script>
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   SEED DATA — embedded from players.json
+═══════════════════════════════════════════════════════════ */
+const SEED_PLAYERS = [{"name":"MS Dhoni","overseas":"FALSE","role":"WK-Batsman","teams_played":"CSK,RPS","captain":"TRUE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Virat Kohli","overseas":"FALSE","role":"Batsman","teams_played":"RCB","captain":"TRUE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Rohit Sharma","overseas":"FALSE","role":"Batsman","teams_played":"DC,MI","captain":"TRUE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Jasprit Bumrah","overseas":"FALSE","role":"Bowler","teams_played":"MI","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Andre Russell","overseas":"TRUE","role":"All-rounder","teams_played":"DC,KKR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Sunil Narine","overseas":"TRUE","role":"All-rounder","teams_played":"KKR","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"AB de Villiers","overseas":"TRUE","role":"WK-Batsman","teams_played":"DC,RCB","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"David Warner","overseas":"TRUE","role":"Batsman","teams_played":"DC,SRH","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Rashid Khan","overseas":"TRUE","role":"Bowler","teams_played":"SRH,GT","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Hardik Pandya","overseas":"FALSE","role":"All-rounder","teams_played":"MI,GT","captain":"TRUE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"KL Rahul","overseas":"FALSE","role":"WK-Batsman","teams_played":"RCB,SRH,PBKS,LSG","captain":"TRUE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Rishabh Pant","overseas":"FALSE","role":"WK-Batsman","teams_played":"DC","captain":"TRUE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Shubman Gill","overseas":"FALSE","role":"Batsman","teams_played":"KKR,GT","captain":"TRUE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Suryakumar Yadav","overseas":"FALSE","role":"Batsman","teams_played":"KKR,MI","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Yuzvendra Chahal","overseas":"FALSE","role":"Bowler","teams_played":"MI,RCB,RR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Ravindra Jadeja","overseas":"FALSE","role":"All-rounder","teams_played":"RR,KTK,CSK,Gujarat Lions","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Jos Buttler","overseas":"TRUE","role":"WK-Batsman","teams_played":"MI,RR","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Faf du Plessis","overseas":"TRUE","role":"Batsman","teams_played":"CSK,RPS,RCB","captain":"TRUE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Glenn Maxwell","overseas":"TRUE","role":"All-rounder","teams_played":"DC,MI,KXIP,RCB","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Dinesh Karthik","overseas":"FALSE","role":"WK-Batsman","teams_played":"DC,KXIP,MI,RCB,KKR,GL","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Trent Boult","overseas":"TRUE","role":"Bowler","teams_played":"SRH,DC,MI,RR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Pat Cummins","overseas":"TRUE","role":"Bowler","teams_played":"KKR,DC,SRH","captain":"TRUE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Heinrich Klaasen","overseas":"TRUE","role":"WK-Batsman","teams_played":"RR,SRH","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Aiden Markram","overseas":"TRUE","role":"Batsman","teams_played":"PBKS,SRH","captain":"TRUE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Mohammed Shami","overseas":"FALSE","role":"Bowler","teams_played":"KKR,DC,PBKS,GT","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Arshdeep Singh","overseas":"FALSE","role":"Bowler","teams_played":"PBKS","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Sanju Samson","overseas":"FALSE","role":"WK-Batsman","teams_played":"RR,DC","captain":"TRUE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Nitish Rana","overseas":"FALSE","role":"Batsman","teams_played":"MI,KKR","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Axar Patel","overseas":"FALSE","role":"All-rounder","teams_played":"MI,KXIP,DC","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Kuldeep Yadav","overseas":"FALSE","role":"Bowler","teams_played":"MI,KKR,DC","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Mitchell Starc","overseas":"TRUE","role":"Bowler","teams_played":"RCB,KKR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Quinton de Kock","overseas":"TRUE","role":"WK-Batsman","teams_played":"SRH,DC,MI,LSG","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Nicholas Pooran","overseas":"TRUE","role":"WK-Batsman","teams_played":"PBKS,SRH,LSG","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Marcus Stoinis","overseas":"TRUE","role":"All-rounder","teams_played":"PBKS,DC,LSG","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Ruturaj Gaikwad","overseas":"FALSE","role":"Batsman","teams_played":"CSK","captain":"TRUE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Devon Conway","overseas":"TRUE","role":"WK-Batsman","teams_played":"CSK","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Deepak Chahar","overseas":"FALSE","role":"Bowler","teams_played":"RPS,CSK","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Shreyas Iyer","overseas":"FALSE","role":"Batsman","teams_played":"DC,KKR","captain":"TRUE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Ishan Kishan","overseas":"FALSE","role":"WK-Batsman","teams_played":"GL,MI","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Tilak Varma","overseas":"FALSE","role":"Batsman","teams_played":"MI","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Cameron Green","overseas":"TRUE","role":"All-rounder","teams_played":"MI,RCB","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Mohit Sharma","overseas":"FALSE","role":"Bowler","teams_played":"CSK,KXIP,DC,GT","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Sai Sudharsan","overseas":"FALSE","role":"Batsman","teams_played":"GT","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Rahul Tewatia","overseas":"FALSE","role":"All-rounder","teams_played":"RR,PBKS,GT","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Prithvi Shaw","overseas":"FALSE","role":"Batsman","teams_played":"DC","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Anrich Nortje","overseas":"TRUE","role":"Bowler","teams_played":"KKR,DC","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Kagiso Rabada","overseas":"TRUE","role":"Bowler","teams_played":"DC,PBKS","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Liam Livingstone","overseas":"TRUE","role":"All-rounder","teams_played":"RR,PBKS","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Mayank Agarwal","overseas":"FALSE","role":"Batsman","teams_played":"RCB,DC,PBKS,SRH","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Bhuvneshwar Kumar","overseas":"FALSE","role":"Bowler","teams_played":"PWI,SRH","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Varun Chakravarthy","overseas":"FALSE","role":"Bowler","teams_played":"KXIP,KKR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Chris Gayle","overseas":"TRUE","role":"Batsman","teams_played":"KKR,RCB,PBKS","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Lasith Malinga","overseas":"TRUE","role":"Bowler","teams_played":"MI","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Kieron Pollard","overseas":"TRUE","role":"All-rounder","teams_played":"MI","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Harbhajan Singh","overseas":"FALSE","role":"Bowler","teams_played":"MI,CSK,KKR","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Gautam Gambhir","overseas":"FALSE","role":"Batsman","teams_played":"DC,KKR","captain":"TRUE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Robin Uthappa","overseas":"FALSE","role":"WK-Batsman","teams_played":"MI,RCB,PWI,KKR,RR,CSK","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Suresh Raina","overseas":"FALSE","role":"Batsman","teams_played":"CSK,GL","captain":"TRUE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Shane Watson","overseas":"TRUE","role":"All-rounder","teams_played":"RR,RCB,CSK","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Yusuf Pathan","overseas":"FALSE","role":"All-rounder","teams_played":"RR,KKR,SRH","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Irfan Pathan","overseas":"FALSE","role":"All-rounder","teams_played":"KXIP,DC,SRH,PWI","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Shikhar Dhawan","overseas":"FALSE","role":"Batsman","teams_played":"DC,MI,DC,SRH,PBKS","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Ajinkya Rahane","overseas":"FALSE","role":"Batsman","teams_played":"MI,RR,RPS,DC,KKR,CSK","captain":"TRUE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Ravichandran Ashwin","overseas":"FALSE","role":"All-rounder","teams_played":"CSK,RPS,KXIP,DC,RR","captain":"TRUE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Morne Morkel","overseas":"TRUE","role":"Bowler","teams_played":"RR,DC,KKR","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Dale Steyn","overseas":"TRUE","role":"Bowler","teams_played":"RCB,SRH,GL","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Brendon McCullum","overseas":"TRUE","role":"WK-Batsman","teams_played":"KKR,CSK,RCB,GL","captain":"TRUE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Adam Gilchrist","overseas":"TRUE","role":"WK-Batsman","teams_played":"DC,KXIP","captain":"TRUE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Virender Sehwag","overseas":"FALSE","role":"Batsman","teams_played":"DC,KXIP","captain":"TRUE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Zaheer Khan","overseas":"FALSE","role":"Bowler","teams_played":"MI,RCB,DC","captain":"TRUE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Pragyan Ojha","overseas":"FALSE","role":"Bowler","teams_played":"DC,MI","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Amit Mishra","overseas":"FALSE","role":"Bowler","teams_played":"DC,DD,LSG","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Piyush Chawla","overseas":"FALSE","role":"Bowler","teams_played":"PBKS,KKR,CSK,MI","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Manish Pandey","overseas":"FALSE","role":"Batsman","teams_played":"MI,RCB,PWI,KKR,SRH,LSG,DC","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Ambati Rayudu","overseas":"FALSE","role":"WK-Batsman","teams_played":"MI,CSK","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Dwayne Bravo","overseas":"TRUE","role":"All-rounder","teams_played":"MI,CSK,GL","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Imran Tahir","overseas":"TRUE","role":"Bowler","teams_played":"DC,PWI,CSK","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Muttiah Muralitharan","overseas":"TRUE","role":"Bowler","teams_played":"CSK,RCB,KTK","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Shaun Marsh","overseas":"TRUE","role":"Batsman","teams_played":"KXIP","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Murali Vijay","overseas":"FALSE","role":"Batsman","teams_played":"CSK,DD,KXIP","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Parthiv Patel","overseas":"FALSE","role":"WK-Batsman","teams_played":"CSK,RCB,DC,SRH,MI","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Wriddhiman Saha","overseas":"FALSE","role":"WK-Batsman","teams_played":"KKR,CSK,PBKS,SRH,GT","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Rahul Dravid","overseas":"FALSE","role":"Batsman","teams_played":"RCB,RR","captain":"TRUE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Jacques Kallis","overseas":"TRUE","role":"All-rounder","teams_played":"RCB,KKR","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Kevin Pietersen","overseas":"TRUE","role":"Batsman","teams_played":"RCB,DD,PWI,SRH","captain":"TRUE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Eoin Morgan","overseas":"TRUE","role":"Batsman","teams_played":"KKR,SRH,KXIP,RCB","captain":"TRUE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Ben Stokes","overseas":"TRUE","role":"All-rounder","teams_played":"RPS,RR,CSK","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Rahul Tripathi","overseas":"FALSE","role":"Batsman","teams_played":"RPS,RR,KKR,SRH","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Washington Sundar","overseas":"FALSE","role":"All-rounder","teams_played":"RPS,RCB,SRH","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Krunal Pandya","overseas":"FALSE","role":"All-rounder","teams_played":"MI,LSG","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Avesh Khan","overseas":"FALSE","role":"Bowler","teams_played":"RCB,DC,LSG,RR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Rinku Singh","overseas":"FALSE","role":"Batsman","teams_played":"PBKS,KKR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Navdeep Saini","overseas":"FALSE","role":"Bowler","teams_played":"RCB,RR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Chris Morris","overseas":"TRUE","role":"All-rounder","teams_played":"CSK,RCB,DC,RR","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"JP Duminy","overseas":"TRUE","role":"All-rounder","teams_played":"MI,DC,DD","captain":"TRUE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Rahul Chahar","overseas":"FALSE","role":"Bowler","teams_played":"RPS,MI,PBKS","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Nathan Coulter-Nile","overseas":"TRUE","role":"Bowler","teams_played":"KKR,DC,MI,RCB,RR","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Kane Williamson","overseas":"TRUE","role":"Batsman","teams_played":"SRH,GT","captain":"TRUE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Mohsin Khan","overseas":"FALSE","role":"Bowler","teams_played":"MI,LSG","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"T Natarajan","overseas":"FALSE","role":"Bowler","teams_played":"PBKS,SRH","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Devdutt Padikkal","overseas":"FALSE","role":"Batsman","teams_played":"RCB,RR,LSG","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Riyan Parag","overseas":"FALSE","role":"All-rounder","teams_played":"RR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Harshal Patel","overseas":"FALSE","role":"Bowler","teams_played":"DC,RCB,PBKS,SRH","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Prasidh Krishna","overseas":"FALSE","role":"Bowler","teams_played":"KKR,RR,GT","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Umesh Yadav","overseas":"FALSE","role":"Bowler","teams_played":"DC,KKR,RCB,GT","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Shardul Thakur","overseas":"FALSE","role":"All-rounder","teams_played":"KXIP,RPS,CSK,DC,KKR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Mukesh Kumar","overseas":"FALSE","role":"Bowler","teams_played":"DC","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Khaleel Ahmed","overseas":"FALSE","role":"Bowler","teams_played":"DC,SRH","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"R Sai Kishore","overseas":"FALSE","role":"Bowler","teams_played":"CSK,GT","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Noor Ahmad","overseas":"TRUE","role":"Bowler","teams_played":"GT","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Rahmanullah Gurbaz","overseas":"TRUE","role":"WK-Batsman","teams_played":"KKR","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Phil Salt","overseas":"TRUE","role":"WK-Batsman","teams_played":"DC,KKR","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Tim David","overseas":"TRUE","role":"Batsman","teams_played":"RCB,MI","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Romario Shepherd","overseas":"TRUE","role":"All-rounder","teams_played":"SRH,LSG,MI","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Gerald Coetzee","overseas":"TRUE","role":"Bowler","teams_played":"MI","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Naveen-ul-Haq","overseas":"TRUE","role":"Bowler","teams_played":"LSG","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Yashasvi Jaiswal","overseas":"FALSE","role":"Batsman","teams_played":"RR","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Dhruv Jurel","overseas":"FALSE","role":"WK-Batsman","teams_played":"RR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Shimron Hetmyer","overseas":"TRUE","role":"Batsman","teams_played":"DC,RR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Tristan Stubbs","overseas":"TRUE","role":"WK-Batsman","teams_played":"MI,DC","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Jake Fraser-McGurk","overseas":"TRUE","role":"Batsman","teams_played":"DC","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Abhishek Sharma","overseas":"FALSE","role":"All-rounder","teams_played":"DC,SRH","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Mayank Yadav","overseas":"FALSE","role":"Bowler","teams_played":"LSG","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Rachin Ravindra","overseas":"TRUE","role":"All-rounder","teams_played":"CSK","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Matheesha Pathirana","overseas":"TRUE","role":"Bowler","teams_played":"CSK","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Tushar Deshpande","overseas":"FALSE","role":"Bowler","teams_played":"DC,CSK","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Ravi Bishnoi","overseas":"FALSE","role":"Bowler","teams_played":"PBKS,LSG","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Ayush Badoni","overseas":"FALSE","role":"Batsman","teams_played":"LSG","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Nehal Wadhera","overseas":"FALSE","role":"Batsman","teams_played":"MI","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Venkatesh Iyer","overseas":"FALSE","role":"All-rounder","teams_played":"KKR","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Nitish Kumar Reddy","overseas":"FALSE","role":"All-rounder","teams_played":"SRH","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Harshit Rana","overseas":"FALSE","role":"Bowler","teams_played":"KKR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Sandeep Sharma","overseas":"FALSE","role":"Bowler","teams_played":"KXIP,SRH,RR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Yash Dayal","overseas":"FALSE","role":"Bowler","teams_played":"GT,RCB","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Akash Madhwal","overseas":"FALSE","role":"Bowler","teams_played":"MI","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Kumar Kartikeya","overseas":"FALSE","role":"Bowler","teams_played":"MI","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Shahbaz Ahmed","overseas":"FALSE","role":"All-rounder","teams_played":"RCB,SRH","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Rahul Sharma","overseas":"FALSE","role":"Bowler","teams_played":"PWI,DC","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Lendl Simmons","overseas":"TRUE","role":"Batsman","teams_played":"MI","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Corey Anderson","overseas":"TRUE","role":"All-rounder","teams_played":"MI,DC,RCB","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Albie Morkel","overseas":"TRUE","role":"All-rounder","teams_played":"CSK,RCB,DC","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Doug Bollinger","overseas":"TRUE","role":"Bowler","teams_played":"CSK","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Michael Hussey","overseas":"TRUE","role":"Batsman","teams_played":"CSK,MI","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Brad Hodge","overseas":"TRUE","role":"Batsman","teams_played":"KKR,RR","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Siddarth Kaul","overseas":"FALSE","role":"Bowler","teams_played":"DC,SRH,RCB","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Kedar Jadhav","overseas":"FALSE","role":"All-rounder","teams_played":"DC,RCB,CSK,SRH","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Karun Nair","overseas":"FALSE","role":"Batsman","teams_played":"RCB,RR,DC,KXIP,LSG","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Mandeep Singh","overseas":"FALSE","role":"Batsman","teams_played":"KKR,PBKS,RCB,DC","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Evin Lewis","overseas":"TRUE","role":"Batsman","teams_played":"MI,RR,LSG","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Mustafizur Rahman","overseas":"TRUE","role":"Bowler","teams_played":"SRH,MI,DC,CSK","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Jason Holder","overseas":"TRUE","role":"All-rounder","teams_played":"SRH,KKR,LSG,RR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Steve Smith","overseas":"TRUE","role":"Batsman","teams_played":"RPS,RR,PWI,DC","captain":"TRUE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Shane Warne","overseas":"TRUE","role":"Bowler","teams_played":"RR","captain":"TRUE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Sanath Jayasuriya","overseas":"TRUE","role":"All-rounder","teams_played":"MI","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Tilakaratne Dilshan","overseas":"TRUE","role":"All-rounder","teams_played":"DC,RCB","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Ross Taylor","overseas":"TRUE","role":"Batsman","teams_played":"RCB,RR,DD,PWI","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Kumar Sangakkara","overseas":"TRUE","role":"WK-Batsman","teams_played":"KXIP,DC,SRH","captain":"TRUE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Mahela Jayawardene","overseas":"TRUE","role":"Batsman","teams_played":"KXIP,DD,Kochi Tuskers Kerala","captain":"TRUE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Sohail Tanvir","overseas":"TRUE","role":"Bowler","teams_played":"RR","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Andrew Symonds","overseas":"TRUE","role":"All-rounder","teams_played":"DC,MI","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Graeme Smith","overseas":"TRUE","role":"Batsman","teams_played":"RR,PWI","captain":"TRUE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Brad Haddin","overseas":"TRUE","role":"WK-Batsman","teams_played":"KKR","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Nathan McCullum","overseas":"TRUE","role":"All-rounder","teams_played":"PWI,SRH","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Thisara Perera","overseas":"TRUE","role":"All-rounder","teams_played":"CSK,SRH,RPS,MI","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Darren Sammy","overseas":"TRUE","role":"All-rounder","teams_played":"SRH,RCB","captain":"TRUE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Marlon Samuels","overseas":"TRUE","role":"All-rounder","teams_played":"PWI,DD","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Dwayne Smith","overseas":"TRUE","role":"All-rounder","teams_played":"MI,DC,CSK,GL","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Laxmipathy Balaji","overseas":"FALSE","role":"Bowler","teams_played":"CSK,KXIP,KKR","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"RP Singh","overseas":"FALSE","role":"Bowler","teams_played":"DC,Kochi Tuskers Kerala,RCB,RPS","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Ashok Dinda","overseas":"FALSE","role":"Bowler","teams_played":"KKR,DC,PWI,RPS,RCB","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Praveen Kumar","overseas":"FALSE","role":"Bowler","teams_played":"RCB,KXIP,MI,GL,SRH","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Munaf Patel","overseas":"FALSE","role":"Bowler","teams_played":"RR,MI,GL","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"S Badrinath","overseas":"FALSE","role":"Batsman","teams_played":"CSK,RCB","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Subramaniam Badrinath","overseas":"FALSE","role":"Batsman","teams_played":"CSK,RCB","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Manvinder Bisla","overseas":"FALSE","role":"WK-Batsman","teams_played":"DC,KXIP,KKR","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Paul Valthaty","overseas":"FALSE","role":"Batsman","teams_played":"KXIP","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Swapnil Asnodkar","overseas":"FALSE","role":"Batsman","teams_played":"RR","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Kamran Khan","overseas":"FALSE","role":"Bowler","teams_played":"RR,PWI","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Amit Tandon","overseas":"FALSE","role":"Batsman","teams_played":"RR","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Iqbal Abdulla","overseas":"FALSE","role":"All-rounder","teams_played":"KKR,RR,RCB","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Joginder Sharma","overseas":"FALSE","role":"All-rounder","teams_played":"CSK","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Pawan Negi","overseas":"FALSE","role":"All-rounder","teams_played":"CSK,DD,RCB","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Stuart Binny","overseas":"FALSE","role":"All-rounder","teams_played":"RR,RCB,MI","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Naman Ojha","overseas":"FALSE","role":"WK-Batsman","teams_played":"RR,DD,SRH","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Karn Sharma","overseas":"FALSE","role":"Bowler","teams_played":"SRH,MI,CSK,RCB","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Manpreet Gony","overseas":"FALSE","role":"Bowler","teams_played":"CSK,DC,KXIP","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Abu Nechim","overseas":"FALSE","role":"Bowler","teams_played":"MI,RCB","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Pravin Tambe","overseas":"FALSE","role":"Bowler","teams_played":"RR,GL,SRH","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Shreyas Gopal","overseas":"FALSE","role":"All-rounder","teams_played":"MI,RR","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Sandeep Lamichhane","overseas":"TRUE","role":"Bowler","teams_played":"DD","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Carlos Brathwaite","overseas":"TRUE","role":"All-rounder","teams_played":"DD,SRH,KKR","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Tom Curran","overseas":"TRUE","role":"All-rounder","teams_played":"KKR,DC,RCB","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Sam Curran","overseas":"TRUE","role":"All-rounder","teams_played":"KXIP,CSK,PBKS","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Nathan Ellis","overseas":"TRUE","role":"Bowler","teams_played":"PBKS","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Lockie Ferguson","overseas":"TRUE","role":"Bowler","teams_played":"RPS,KKR,GT,RCB","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Adam Zampa","overseas":"TRUE","role":"Bowler","teams_played":"RPS,RCB,RR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Daniel Sams","overseas":"TRUE","role":"All-rounder","teams_played":"RCB,MI,LSG","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Dewald Brevis","overseas":"TRUE","role":"Batsman","teams_played":"MI","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Priyam Garg","overseas":"FALSE","role":"Batsman","teams_played":"SRH,DC","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Anukul Roy","overseas":"FALSE","role":"All-rounder","teams_played":"MI,KKR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Chetan Sakariya","overseas":"FALSE","role":"Bowler","teams_played":"RR,DC,KKR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Rajat Bhatia","overseas":"FALSE","role":"All-rounder","teams_played":"DC,KKR,RR,RPS","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Varun Aaron","overseas":"FALSE","role":"Bowler","teams_played":"DD,RCB,KXIP,GT","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Ashish Nehra","overseas":"FALSE","role":"Bowler","teams_played":"MI,CSK,DD,PWI,SRH","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Vinay Kumar","overseas":"FALSE","role":"Bowler","teams_played":"RCB,KKR,MI,KTK","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Dhawal Kulkarni","overseas":"FALSE","role":"Bowler","teams_played":"MI,RR,GT","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Pankaj Singh","overseas":"FALSE","role":"Bowler","teams_played":"RR,RCB","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Rishi Dhawan","overseas":"FALSE","role":"All-rounder","teams_played":"MI,KXIP,PBKS","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Basil Thampi","overseas":"FALSE","role":"Bowler","teams_played":"GL,SRH,MI","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Ishant Sharma","overseas":"FALSE","role":"Bowler","teams_played":"KKR,DC,SRH,RPS","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Sreesanth","overseas":"FALSE","role":"Bowler","teams_played":"KXIP,RR","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"R Vinay Kumar","overseas":"FALSE","role":"Bowler","teams_played":"RCB,KKR,MI,KTK","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Manoj Tiwary","overseas":"FALSE","role":"Batsman","teams_played":"DD,KXIP,RPS","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Murugan Ashwin","overseas":"FALSE","role":"Bowler","teams_played":"RPS,DC,PBKS,MI","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"Sarfaraz Khan","overseas":"FALSE","role":"Batsman","teams_played":"RCB,PBKS,DC","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Shahbaz Nadeem","overseas":"FALSE","role":"Bowler","teams_played":"DD,SRH,LSG","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Amitoze Singh","overseas":"FALSE","role":"All-rounder","teams_played":"KXIP","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Prerak Mankad","overseas":"FALSE","role":"All-rounder","teams_played":"PBKS,LSG","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Yash Thakur","overseas":"FALSE","role":"Bowler","teams_played":"LSG","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Akash Singh","overseas":"FALSE","role":"Bowler","teams_played":"RR,CSK","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"K Gowtham","overseas":"FALSE","role":"All-rounder","teams_played":"MI,RR,CSK,LSG","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Anmolpreet Singh","overseas":"FALSE","role":"Batsman","teams_played":"MI,SRH","captain":"FALSE","active":"TRUE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Priyank Panchal","overseas":"FALSE","role":"Batsman","teams_played":"KXIP","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Tanmay Agarwal","overseas":"FALSE","role":"Batsman","teams_played":"SRH","captain":"FALSE","active":"FALSE","opener":"TRUE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Saurabh Kumar","overseas":"FALSE","role":"All-rounder","teams_played":"PWI,GT","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"TRUE"},{"name":"M Siddharth","overseas":"FALSE","role":"Bowler","teams_played":"LSG","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Swapnil Singh","overseas":"FALSE","role":"All-rounder","teams_played":"PBKS,LSG,RCB","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Arjun Tendulkar","overseas":"FALSE","role":"All-rounder","teams_played":"MI","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Rasikh Salam","overseas":"FALSE","role":"Bowler","teams_played":"MI,KKR,DC","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Yudhvir Singh","overseas":"FALSE","role":"Bowler","teams_played":"LSG","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Kuldip Yadav","overseas":"FALSE","role":"Bowler","teams_played":"RR","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Shivam Mavi","overseas":"FALSE","role":"Bowler","teams_played":"KKR,GT,LSG","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Kamlesh Nagarkoti","overseas":"FALSE","role":"Bowler","teams_played":"KKR,DC","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Abdul Samad","overseas":"FALSE","role":"All-rounder","teams_played":"SRH","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Abhishek Porel","overseas":"FALSE","role":"WK-Batsman","teams_played":"DC","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"KS Bharat","overseas":"FALSE","role":"WK-Batsman","teams_played":"DC,RCB,GT,KKR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Suyash Sharma","overseas":"FALSE","role":"Bowler","teams_played":"KKR","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Anuj Rawat","overseas":"FALSE","role":"WK-Batsman","teams_played":"RR,RCB","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"TRUE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Ripal Patel","overseas":"FALSE","role":"Batsman","teams_played":"DC","captain":"FALSE","active":"FALSE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Rajvardhan Hangargekar","overseas":"FALSE","role":"All-rounder","teams_played":"CSK","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Simarjeet Singh","overseas":"FALSE","role":"Bowler","teams_played":"CSK","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"TRUE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Hrithik Shokeen","overseas":"FALSE","role":"All-rounder","teams_played":"MI","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Naman Dhir","overseas":"FALSE","role":"Batsman","teams_played":"MI","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Sameer Rizvi","overseas":"FALSE","role":"Batsman","teams_played":"CSK","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"},{"name":"Shashank Singh","overseas":"FALSE","role":"All-rounder","teams_played":"DC,RR,SRH,PBKS","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"TRUE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Vijay Shankar","overseas":"FALSE","role":"All-rounder","teams_played":"CSK,SRH,GT","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"FALSE","pace_bowler":"TRUE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Sai Kishore","overseas":"FALSE","role":"Bowler","teams_played":"CSK,GT","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"FALSE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"FALSE","death_bowler":"FALSE","played_multiple_teams":"TRUE","played_defunct_team":"FALSE"},{"name":"Mohit Rathee","overseas":"FALSE","role":"All-rounder","teams_played":"PBKS","captain":"FALSE","active":"TRUE","opener":"FALSE","finisher":"TRUE","spinner":"TRUE","pace_bowler":"FALSE","wicketkeeper":"FALSE","aggressive":"TRUE","death_bowler":"FALSE","played_multiple_teams":"FALSE","played_defunct_team":"FALSE"}];
+
+/* ═══════════════════════════════════════════════════════════
+   RUNTIME DATABASE  (seed + user-added merged)
+═══════════════════════════════════════════════════════════ */
+function getRuntimePlayers() {
+  const saved = loadDB();
+  if (saved && saved.length >= SEED_PLAYERS.length) return saved;
+  // First run — persist seed to localStorage so user additions survive
+  saveDB(SEED_PLAYERS);
+  return [...SEED_PLAYERS];
+}
+
+let PLAYERS = getRuntimePlayers();
+
+/* ═══════════════════════════════════════════════════════════
+   GAME STATE
+═══════════════════════════════════════════════════════════ */
+const G = {
+  active: false,
+  players: [],
+  weights: [],
+  history: [],
+  qCount: 0,
+  MIN_Q: 8,
+  MAX_Q: 12,
+  curAttr: null,
+  curQ: null,
+  initEntropy: 0,
+};
+
+/* ═══════════════════════════════════════════════════════════
+   START GAME
+═══════════════════════════════════════════════════════════ */
+function startGame() {
+  PLAYERS = getRuntimePlayers();               // pick up any new additions
+  G.players       = [...PLAYERS];
+  G.weights       = new Array(PLAYERS.length).fill(1 / PLAYERS.length);
+  G.history       = [];
+  G.qCount        = 0;
+  G.curAttr       = null;
+  G.curQ          = null;
+  G.active        = true;
+  G.initEntropy   = calcEntropy(G.weights);
+
+  // Reset UI
+  document.getElementById('historyWrap').style.display = 'none';
+  document.getElementById('historyList').innerHTML = '';
+  document.getElementById('wrongFlow').style.display  = 'none';
+  document.getElementById('wfMsg').style.display      = 'none';
+  document.getElementById('wfInput').value            = '';
+  updateConfUI(0);
+  updateCandUI(PLAYERS.length);
+  updateDBSizeUI();
+  document.getElementById('qNumDisp').textContent    = '1';
+  document.getElementById('entropyDisp').textContent = '0%';
+  document.getElementById('pbVal').textContent       = '0 / 12';
+  document.getElementById('pbFill').style.width      = '0%';
+  document.getElementById('candList').innerHTML      =
+    '<div style="text-align:center;color:var(--muted);padding:24px;font-size:13px">Awaiting first answer…</div>';
+
+  showScreen('game');
+  setAnswersEnabled(false);
+  doNextQuestion();
+}
+
+/* ═══════════════════════════════════════════════════════════
+   QUESTION LOOP
+═══════════════════════════════════════════════════════════ */
+async function doNextQuestion() {
+  if (!G.active) return;
+  const conf = getConfidence(G.weights);
+  updateConfUI(conf);
+  updateCandUI(getActiveCandidateCount(G.weights));
+  updateCandPanel();
+
+  if (shouldGuessNow()) { finalGuess(); return; }
+
+  const usedKeys = G.history.map(h => h.attr);
+  const attr = bestAttribute(G.players, G.weights, usedKeys);
+  if (!attr) { finalGuess(); return; }
+
+  G.curAttr = attr.key;
+  G.qCount++;
+  document.getElementById('qNumDisp').textContent = G.qCount;
+  document.getElementById('pbVal').textContent    = `${G.qCount} / 12`;
+  document.getElementById('pbFill').style.width   = `${Math.round(G.qCount / G.MAX_Q * 100)}%`;
+
+  showThinking();
+  setAnswersEnabled(false);
+
+  const top      = getTopCandidates(G.players, G.weights, 3);
+  const topNames = top.map(x => x.player.name).join(', ');
+  const count    = getActiveCandidateCount(G.weights);
+
+  G.curQ = await generateQuestion(attr.key, attr.label, topNames, count, G.qCount);
+  showQuestion(G.curQ, G.qCount);
+  setAnswersEnabled(true);
+}
+
+function shouldGuessNow() {
+  const conf = getConfidence(G.weights);
+  const q    = G.qCount;
+  if (q < G.MIN_Q)  return false;
+  if (q >= G.MAX_Q) return true;
+  if (conf >= 85)   return true;
+  return false;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ANSWER HANDLER — no persistent CSS class added
+═══════════════════════════════════════════════════════════ */
+function answer(resp) {
+  if (!G.active || !G.curAttr) return;
+
+  // Immediately disable & blur so no hover state lingers
+  setAnswersEnabled(false);
+  document.activeElement && document.activeElement.blur();
+
+  G.weights = updateWeights(G.players, G.weights, G.curAttr, resp);
+  G.history.push({ q: G.curQ, attr: G.curAttr, resp });
+
+  const ePct = getEntropyReductionPercent(G.initEntropy, G.weights);
+  document.getElementById('entropyDisp').textContent = ePct + '%';
+
+  updateHistory();
+  setTimeout(doNextQuestion, 300);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FINAL GUESS
+═══════════════════════════════════════════════════════════ */
+function finalGuess() {
+  G.active = false;
+  const top    = getTopCandidates(G.players, G.weights, 5);
+  const best   = top[0].player;
+  const conf   = getConfidence(G.weights);
+  const score  = Math.round((conf / Math.max(G.qCount, 1)) * 10) / 10;
+  const active = getActiveCandidateCount(G.weights);
+
+  document.getElementById('resName').textContent  = best.name;
+  document.getElementById('resBadge').textContent = `${best.role} · ${best.teams_played}`;
+  document.getElementById('resConf').textContent  = conf + '%';
+  document.getElementById('rsQ').textContent      = G.qCount;
+  document.getElementById('rsC').textContent      = active;
+  document.getElementById('rsS').textContent      = score;
+  document.getElementById('resTeams').innerHTML   =
+    `Teams: <strong>${best.teams_played.split(',').join(' · ')}</strong>`;
+
+  const confBar = document.getElementById('resConfBar');
+  confBar.style.width = '0%';
+  setTimeout(() => { confBar.style.width = conf + '%'; }, 120);
+
+  // Colour confidence number
+  const confEl = document.getElementById('resConf');
+  confEl.style.color = conf >= 80 ? 'var(--green)' : conf >= 60 ? 'var(--gold)' : 'var(--red)';
+
+  showScreen('result');
+  launchConfetti();
+
+  // Save to leaderboard
+  const lb = loadLeaderboard();
+  lb.unshift({ name: best.name, conf, q: G.qCount, score, date: new Date().toLocaleDateString('en-IN') });
+  localStorage.setItem('ipl_ak_lb', JSON.stringify(lb.slice(0, 25)));
+}
+
+/* ═══════════════════════════════════════════════════════════
+   WRONG GUESS FLOW — DB check + add
+═══════════════════════════════════════════════════════════ */
+function showWrongFlow() {
+  document.getElementById('wrongFlow').style.display = 'block';
+  document.getElementById('wfInput').focus();
+}
+
+async function submitCorrection() {
+  const raw  = document.getElementById('wfInput').value.trim();
+  const msg  = document.getElementById('wfMsg');
+  if (!raw) return;
+
+  const guessed = document.getElementById('resName').textContent;
+  msg.style.display = 'none';
+
+  // Save correction log regardless
+  saveCorrection(guessed, raw, G.history);
+
+  // Check database
+  const existing = findPlayerByName(PLAYERS, raw);
+
+  if (existing) {
+    // Player IS already in DB
+    msg.className   = 'wf-msg info';
+    msg.textContent = `ℹ️  "${existing.name}" is already in our database! The AI will improve its reasoning based on this session.`;
+    msg.style.display = 'block';
+  } else {
+    // Player NOT in DB — add them
+    msg.className   = 'wf-msg info';
+    msg.textContent = `⏳ Adding "${raw}" to the database using Gemini AI… please wait.`;
+    msg.style.display = 'block';
+
+    try {
+      const newPlayer = await addNewPlayerToDB(PLAYERS, raw);
+      PLAYERS = getRuntimePlayers();   // refresh from localStorage
+      msg.className   = 'wf-msg ok';
+      msg.textContent = `✅ "${newPlayer.name}" has been added to the database (${PLAYERS.length} players total)! The AI will use this data in future games.`;
+    } catch (e) {
+      msg.className   = 'wf-msg info';
+      msg.textContent = `⚠️ Could not auto-generate data for "${raw}". It has been queued for manual review.`;
+    }
+    updateDBSizeUI();
+  }
+
+  document.getElementById('wfInput').value = '';
+}
+
+/* ═══════════════════════════════════════════════════════════
+   UI HELPERS
+═══════════════════════════════════════════════════════════ */
+function showThinking() {
+  document.getElementById('aiBubble').innerHTML =
+    '<div class="think-dots"><div class="t-dot d1"></div><div class="t-dot d2"></div><div class="t-dot d3"></div></div>';
+  document.getElementById('aiAvatar').textContent = '🤔';
+  document.getElementById('charHead').textContent  = '🤔';
+  document.getElementById('charHead').classList.add('thinking');
+}
+function showQuestion(q, num) {
+  document.getElementById('aiBubble').innerHTML =
+    `<span class="q-badge">Q${num}</span><span>${q}</span>`;
+  document.getElementById('aiAvatar').textContent = '🤖';
+  document.getElementById('charHead').textContent  = '🤖';
+  document.getElementById('charHead').classList.remove('thinking');
+}
+function setAnswersEnabled(on) {
+  ['btn-yes','btn-no','btn-maybe','btn-dk'].forEach(id => {
+    const b = document.getElementById(id);
+    b.disabled = !on;
+    // Force remove any stale browser focus/hover paint by blurring
+    if (!on) b.blur();
+  });
+}
+
+function updateConfUI(v) {
+  const el = document.getElementById('confVal');
+  el.textContent = v + '%';
+  el.style.color = v >= 80 ? 'var(--green)' : v >= 50 ? 'var(--gold)' : 'var(--blue2)';
+  document.getElementById('confBarFill').style.width = v + '%';
+}
+function updateCandUI(v) {
+  document.getElementById('candVal').textContent = v;
+  const pct = Math.round((1 - v / PLAYERS.length) * 100);
+  document.getElementById('candBarFill').style.width = pct + '%';
+}
+function updateDBSizeUI() {
+  document.getElementById('dbSizeDisp').textContent = PLAYERS.length;
+}
+function updateCandPanel() {
+  const top = getTopCandidates(G.players, G.weights, 5);
+  if (!top.length) return;
+  const maxW   = top[0].weight || 1;
+  const colors = ['var(--gold)','#c0c0c0','#cd7f32','var(--blue2)','var(--teal)'];
+  const ranks  = ['👑','2','3','4','5'];
+  document.getElementById('candList').innerHTML = top.map((x, i) => `
+    <div class="cand-item">
+      <div class="cand-rank ${i===0?'r1':i===1?'r2':i===2?'r3':''}">${ranks[i]}</div>
+      <div class="cand-info">
+        <div class="cand-name">${x.player.name}</div>
+        <div class="cand-sub">${x.player.role} · ${x.player.teams_played.split(',')[0]}</div>
+        <div class="cand-mini">
+          <div class="cand-mini-fill" style="width:${Math.round(x.weight/maxW*100)}%;background:${colors[i]}"></div>
+        </div>
+      </div>
+      <div class="cand-pct">${Math.round(x.weight*100)}%</div>
+    </div>`).join('');
+}
+function updateHistory() {
+  if (!G.history.length) return;
+  document.getElementById('historyWrap').style.display = 'block';
+  const labels = { yes:'Yes', no:'No', maybe:'Maybe', dk:"Don't Know" };
+  document.getElementById('historyList').innerHTML = G.history.slice().reverse().map(h => `
+    <div class="hist-item">
+      <span class="hist-q">${h.q}</span>
+      <span class="hist-ans ${h.resp==='dk'?'dk':h.resp}">${labels[h.resp]||h.resp}</span>
+    </div>`).join('');
+}
+
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+function showLeaderboard() {
+  const lb = loadLeaderboard();
+  if (!lb.length) {
+    document.getElementById('lbBody').innerHTML =
+      '<div class="lb-empty">🏏 No games yet! Play to get on the board.</div>';
+  } else {
+    const medals = ['gold','silver','bronze'];
+    document.getElementById('lbBody').innerHTML = lb.map((e,i) => `
+      <div class="lb-row ${i<3?'top'+(i+1):''}">
+        <div class="lb-rank ${medals[i]||'norm'}">${i===0?'🥇':i===1?'🥈':i===2?'🥉':'#'+(i+1)}</div>
+        <div class="lb-info">
+          <div class="lb-pname">${e.name}</div>
+          <div class="lb-meta">${e.q} questions · ${e.date}</div>
+        </div>
+        <div class="lb-score">
+          <div class="lb-pct">${e.conf}%</div>
+          <div class="lb-scr">Score: ${e.score}</div>
+        </div>
+      </div>`).join('');
+  }
+  showScreen('leaderboard');
+}
+
+/* ═══════════════════════════════════════════════════════════
+   KEYBOARD SHORTCUTS
+═══════════════════════════════════════════════════════════ */
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('game').classList.contains('active')) return;
+  if (!G.active || !G.curAttr) return;
+  // Don't fire if typing in an input
+  if (e.target.tagName === 'INPUT') return;
+  const k = e.key.toLowerCase();
+  if (k === 'y') answer('yes');
+  else if (k === 'n') answer('no');
+  else if (k === 'm') answer('maybe');
+  else if (k === 'd') answer('dk');
+});
+
+/* ═══════════════════════════════════════════════════════════
+   PARTICLE BACKGROUND
+═══════════════════════════════════════════════════════════ */
+(function () {
+  const c = document.getElementById('bgCanvas');
+  const x = c.getContext('2d');
+  let pts = [];
+  function resize() { c.width = innerWidth; c.height = innerHeight; }
+  function init() {
+    pts = [];
+    for (let i = 0; i < 70; i++) pts.push({
+      x: Math.random()*c.width, y: Math.random()*c.height,
+      vx: (Math.random()-.5)*.22, vy: (Math.random()-.5)*.22,
+      r: Math.random()*1.6+.3,
+      a: Math.random()*.28+.08,
+      col: Math.random()>.5 ? '255,200,0' : '74,143,255',
+    });
+  }
+  function draw() {
+    x.clearRect(0,0,c.width,c.height);
+    for (const p of pts) {
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0)p.x=c.width; if(p.x>c.width)p.x=0;
+      if(p.y<0)p.y=c.height; if(p.y>c.height)p.y=0;
+      x.beginPath(); x.arc(p.x,p.y,p.r,0,Math.PI*2);
+      x.fillStyle=`rgba(${p.col},${p.a})`; x.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  resize(); init(); draw();
+  window.addEventListener('resize', ()=>{ resize(); init(); });
+})();
+
+/* ═══════════════════════════════════════════════════════════
+   CONFETTI
+═══════════════════════════════════════════════════════════ */
+function launchConfetti() {
+  const c = document.getElementById('confettiCanvas');
+  c.style.display = 'block';
+  c.width = innerWidth; c.height = innerHeight;
+  const ctx = c.getContext('2d');
+  const cols = ['#ffc800','#ff8c00','#00e676','#4a8fff','#ff3b3b','#fff','#00cec8'];
+  const pieces = Array.from({length:130}, () => ({
+    x: Math.random()*c.width, y: -10-Math.random()*220,
+    vx: (Math.random()-.5)*5, vy: Math.random()*4+2,
+    rot: Math.random()*360, rv: (Math.random()-.5)*9,
+    w: Math.random()*9+4, h: Math.random()*5+3,
+    col: cols[Math.floor(Math.random()*cols.length)],
+    life: 1,
+  }));
+  let frame = 0;
+  (function loop() {
+    ctx.clearRect(0,0,c.width,c.height);
+    let alive = false;
+    for (const p of pieces) {
+      p.x+=p.vx; p.y+=p.vy; p.vy+=.06; p.rot+=p.rv; p.life-=.007;
+      if (p.life>0 && p.y<c.height) alive=true;
+      ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.rot*Math.PI/180);
+      ctx.fillStyle=p.col; ctx.globalAlpha=Math.max(0,p.life);
+      ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h); ctx.restore();
+    }
+    if (alive && frame++<500) requestAnimationFrame(loop);
+    else { ctx.clearRect(0,0,c.width,c.height); c.style.display='none'; }
+  })();
+}
+
+/* ═══════════════════════════════════════════════════════════
+   DRS TICKER (home screen)
+═══════════════════════════════════════════════════════════ */
+(function () {
+  const ticker = document.getElementById('drsTicker');
+  if (!ticker) return;
+  let offset = 0;
+  function step() {
+    offset -= .4;
+    if (offset < -ticker.scrollWidth / 2) offset = 0;
+    ticker.style.transform = `translateX(${offset}px)`;
+    requestAnimationFrame(step);
+  }
+  // Duplicate items for seamless loop
+  ticker.innerHTML += ticker.innerHTML;
+  step();
+})();
+</script>
+</body>
+</html>
