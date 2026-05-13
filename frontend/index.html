@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>IPL Akinator — Guess Your Player</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 
@@ -64,7 +64,7 @@
 
     <!-- Akinator character -->
     <div class="pitch-right">
-      <div class="speech-bubble" style="margin-bottom: 20px;">Think of an IPL player,<br>I will guess who it is! 🏏</div>
+      <div class="speech-bubble">Think of an IPL player,<br>I will <span class="highlight">guess</span> who it is! ✏️</div>
       <img src="../assets/akinator_robot.png" class="akinator-img" alt="IPL Akinator Robot">
     </div>
 
@@ -296,6 +296,25 @@
 </div>
 
 
+<!-- ══════════════ MULTI-GUESS (TIE BREAKER) ══════════════ -->
+<div id="multiGuess" class="screen">
+  <div class="result-outer">
+    <div class="result-card">
+      <span class="trophy-wrap" style="font-size:52px">🤔</span>
+      <div class="res-label" style="color:var(--gold)">It's a close call…</div>
+      <div class="mg-count" id="mgCount">Suspect 1 of 3</div>
+      <div class="res-label" style="margin-top:14px">Could it be…</div>
+      <div class="res-name" id="mgName">Player Name</div>
+      <div class="res-badge" id="mgBadge">Role · Team</div>
+      <div class="res-teams" id="mgTeams" style="margin-top:10px"></div>
+      <div class="res-actions" style="margin-top:28px">
+        <button class="r-btn success" onclick="mgYes()">✅ Yes, that's them!</button>
+        <button class="r-btn danger"  onclick="mgNo()">❌ No, next guess →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ══════════════ SCRIPTS ══════════════ -->
 <script src="../engine/probabilityEngine.js"></script>
 <script src="../brain/aiBrain.js"></script>
@@ -407,12 +426,18 @@ async function doNextQuestion() {
   setAnswersEnabled(true);
 }
 
+function hasClearLeader(weights, margin = 0.07) {
+  const sorted = [...weights].sort((a, b) => b - a);
+  if (sorted.length < 2) return true;
+  return (sorted[0] - sorted[1]) > margin;
+}
+
 function shouldGuessNow() {
   const conf = getConfidence(G.weights);
   const q    = G.qCount;
-  if (q < G.MIN_Q)  return false;
-  if (q >= G.MAX_Q) return true;
-  if (conf >= 85)   return true;
+  if (q < G.MIN_Q)  return false;               // must ask at least 8
+  if (q >= G.MAX_Q) return true;                // forced at Q12 regardless
+  if (conf >= 85 && hasClearLeader(G.weights)) return true; // clear winner early
   return false;
 }
 
@@ -439,14 +464,37 @@ function answer(resp) {
 /* ═══════════════════════════════════════════════════════════
    FINAL GUESS
 ═══════════════════════════════════════════════════════════ */
+let G_tiedCandidates = [];
+let G_tiedIndex = 0;
+
+function getTiedCandidates(topN = 10, margin = 0.06) {
+  const top = getTopCandidates(G.players, G.weights, topN);
+  const bestWeight = top[0]?.weight || 0;
+  return top.filter(x => (bestWeight - x.weight) <= margin);
+}
+
 function finalGuess() {
   G.active = false;
   const top    = getTopCandidates(G.players, G.weights, 5);
-  const best   = top[0].player;
   const conf   = getConfidence(G.weights);
   const score  = Math.round((conf / Math.max(G.qCount, 1)) * 10) / 10;
   const active = getActiveCandidateCount(G.weights);
 
+  // Detect if there are tied candidates at Q12
+  const tied = getTiedCandidates();
+  if (tied.length > 1 && G.qCount >= G.MAX_Q) {
+    // Show multi-guess flow
+    G_tiedCandidates = tied;
+    G_tiedIndex = 0;
+    document.getElementById('rsQ').textContent = G.qCount;
+    document.getElementById('rsC').textContent = active;
+    document.getElementById('rsS').textContent = score;
+    showMultiGuess();
+    return;
+  }
+
+  // Single clear winner
+  const best = top[0].player;
   document.getElementById('resName').textContent  = best.name;
   document.getElementById('resBadge').textContent = `${best.role} · ${best.teams_played}`;
   document.getElementById('resConf').textContent  = conf + '%';
@@ -460,7 +508,6 @@ function finalGuess() {
   confBar.style.width = '0%';
   setTimeout(() => { confBar.style.width = conf + '%'; }, 120);
 
-  // Colour confidence number
   const confEl = document.getElementById('resConf');
   confEl.style.color = conf >= 80 ? 'var(--green)' : conf >= 60 ? 'var(--gold)' : 'var(--red)';
 
@@ -468,6 +515,56 @@ function finalGuess() {
   document.getElementById('resActionsAsk').style.display = 'flex';
   document.getElementById('resActionsDone').style.display = 'none';
   document.getElementById('wrongFlow').style.display = 'none';
+}
+
+/* ── Multi-guess (tie) flow ─────────────────────── */
+function showMultiGuess() {
+  const candidate = G_tiedCandidates[G_tiedIndex];
+  const p = candidate.player;
+  const total = G_tiedCandidates.length;
+
+  document.getElementById('mgName').textContent   = p.name;
+  document.getElementById('mgBadge').textContent  = `${p.role} · ${p.teams_played}`;
+  document.getElementById('mgCount').textContent  = `Suspect ${G_tiedIndex + 1} of ${total}`;
+  document.getElementById('mgTeams').innerHTML    =
+    `Teams: <strong>${p.teams_played.split(',').join(' · ')}</strong>`;
+  showScreen('multiGuess');
+}
+
+function mgYes() {
+  launchConfetti();
+  // Swap to result screen celebrating correct guess
+  const p = G_tiedCandidates[G_tiedIndex].player;
+  document.getElementById('resName').textContent  = p.name;
+  document.getElementById('resBadge').textContent = `${p.role} · ${p.teams_played}`;
+  document.getElementById('resConf').textContent  = '✅ Correct!';
+  document.getElementById('resConf').style.color  = 'var(--green)';
+  document.getElementById('resConfBar').style.width = '100%';
+  document.getElementById('resTeams').innerHTML   =
+    `Teams: <strong>${p.teams_played.split(',').join(' · ')}</strong>`;
+  showScreen('result');
+  document.getElementById('resActionsAsk').style.display = 'none';
+  document.getElementById('resActionsDone').style.display = 'flex';
+  document.getElementById('wrongFlow').style.display = 'none';
+}
+
+function mgNo() {
+  G_tiedIndex++;
+  if (G_tiedIndex < G_tiedCandidates.length) {
+    showMultiGuess();
+  } else {
+    // All guesses exhausted — show wrong flow
+    document.getElementById('resName').textContent  = '???';
+    document.getElementById('resBadge').textContent = 'The AI is stumped!';
+    document.getElementById('resConf').textContent  = '😵 Stumped';
+    document.getElementById('resConf').style.color  = 'var(--red)';
+    document.getElementById('resConfBar').style.width = '0%';
+    document.getElementById('resTeams').innerHTML   = '';
+    showScreen('result');
+    document.getElementById('resActionsAsk').style.display = 'none';
+    document.getElementById('resActionsDone').style.display = 'none';
+    document.getElementById('wrongFlow').style.display = 'block';
+  }
 }
 
 function handleCorrect() {
