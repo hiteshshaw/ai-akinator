@@ -157,7 +157,12 @@ h1.hero-title .w3{display:block;background:linear-gradient(120deg,var(--blue2),v
   font-family:var(--font-head);font-size:14px;font-weight:700;
   color:var(--gold);letter-spacing:1px;white-space:nowrap;
   padding-right:16px;border-right:1px solid var(--border2);
-  flex-shrink:0;
+  flex-shrink:0;position:relative;z-index:2;
+  background:linear-gradient(90deg,rgba(17,32,56,0.95) 85%,transparent 100%);
+  padding-right:24px;
+}
+.drs-scroll-wrap{
+  flex:1;overflow:hidden;position:relative;
 }
 .drs-items{
   display:flex;gap:40px;white-space:nowrap;
