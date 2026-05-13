@@ -4,8 +4,7 @@
  */
 "use strict";
 
-const GEMINI_KEY = "AIzaSyBRoVW15TxJp8yM5vo8lwJCsj3t-wqFaLY";
-const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`;
+const BACKEND_URL = "http://localhost:3000";
 
 const FALLBACK_QUESTIONS = {
   overseas:              "Is your player from outside India — an overseas international?",
@@ -26,34 +25,43 @@ const FALLBACK_QUESTIONS = {
 };
 
 async function generateQuestion(attrKey, attrLabel, topNames, candidateCount, questionNum) {
-  const prompt = `You are the IPL Akinator — a dramatic, energetic cricket quiz game-show host.
-You are on question ${questionNum} of 12. You need to ask about this trait: "${attrLabel}" (Internal key: ${attrKey}).
-Top suspects right now: ${topNames}. Players still in the game: ${candidateCount}.
+  // Pick a random style archetype so every Gemini call has a different persona/tone
+  const styles = [
+    "Ask like Ravi Shastri mid-match: explosive and theatrical.",
+    "Ask like a calm, analytical cricket statistician at a press conference.",
+    "Ask like a street-smart cricket fan teasing a friend.",
+    "Ask as a Bollywood quiz show host — dramatic, filmy and over the top.",
+    "Ask like you're narrating a suspenseful detective novel.",
+    "Ask as a nervous young fan meeting their hero for the first time.",
+    "Ask like a sarcastic cricket pundit who has seen it all.",
+    "Ask like a confident T20 auctioneer trying to hype up the crowd.",
+  ];
+  const style = styles[Math.floor(Math.random() * styles.length)];
 
-Write ONE short, exciting question to ask if the player has this trait.
-CRITICAL RULES:
-- VARY YOUR PHRASING WILDLY! Do not use the same sentence structures repeatedly.
-- Maximum 18 words
-- Do NOT mention any player name
-- Be dramatic and fun like a cricket commentator on a big final night
-- End with a question mark
-- Return ONLY the question text — nothing else`;
+  const prompt = `You are an IPL Akinator game show. You must ask ONE yes/no question about this single trait: "${attrLabel}".
+
+Your tone/style for THIS question ONLY: ${style}
+
+Context: Question ${questionNum} of 12. Current suspects: ${topNames}. Players remaining: ${candidateCount}.
+
+STRICT RULES:
+- ONE sentence only, maximum 18 words
+- Must be a yes/no question (end with ?)
+- NEVER mention a player's name
+- Use ONLY the style described above — commit to it fully
+- Return ONLY the question text, no quotes, no labels`;
 
   try {
-    const res = await fetch(GEMINI_URL, {
+    const res = await fetch(`${BACKEND_URL}/api/generate-question`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: { maxOutputTokens: 80, temperature: 0.88 },
-      }),
+      body: JSON.stringify({ prompt }),
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
-    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
-    if (text) return text.replace(/^["'`]|["'`]$/g, "").trim();
+    if (data.question) return data.question;
   } catch (e) {
-    console.warn("[Brain] Gemini unavailable, using fallback:", e.message);
+    console.warn("[Brain] Backend unavailable, using fallback:", e.message);
   }
   return FALLBACK_QUESTIONS[attrKey] || `Is this player known for: ${attrLabel}?`;
 }
@@ -110,19 +118,14 @@ Return ONLY valid JSON, no markdown, no explanation.`;
 
   let newPlayer = null;
   try {
-    const res = await fetch(GEMINI_URL, {
+    const res = await fetch(`${BACKEND_URL}/api/add-player`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: { maxOutputTokens: 300, temperature: 0.2 },
-      }),
+      body: JSON.stringify({ prompt }),
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
-    let raw = data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "";
-    raw = raw.replace(/```json|```/g, "").trim();
-    newPlayer = JSON.parse(raw);
+    newPlayer = data.player;
   } catch (e) {
     console.warn("[Brain] Could not auto-generate player data:", e.message);
     // Fallback minimal entry
@@ -174,5 +177,5 @@ function loadLeaderboard() {
 }
 
 if (typeof module !== "undefined") {
-  module.exports = { generateQuestion, loadDB, saveDB, findPlayerByName, addNewPlayerToDB, saveCorrection, loadCorrections, saveToLeaderboard, loadLeaderboard, FALLBACK_QUESTIONS, GEMINI_KEY };
+  module.exports = { generateQuestion, loadDB, saveDB, findPlayerByName, addNewPlayerToDB, saveCorrection, loadCorrections, saveToLeaderboard, loadLeaderboard, FALLBACK_QUESTIONS };
 }

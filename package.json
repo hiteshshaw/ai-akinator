@@ -1,0 +1,26 @@
+{
+  "name": "ipl_akinator",
+  "version": "1.0.0",
+  "description": "An AI-powered cricket player guessing game powered by **Google Gemini**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiteshshaw/ai-akinator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/hiteshshaw/ai-akinator/issues"
+  },
+  "homepage": "https://github.com/hiteshshaw/ai-akinator#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>IPL Akinator — Guess Your Player</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 
@@ -25,7 +25,6 @@
   </div>
   <div class="nav-status"><div class="live-dot"></div>AI Engine Online</div>
   <div class="nav-right">
-    <button class="nav-btn" onclick="showLeaderboard()">🏆 LEADERBOARD</button>
     <button class="nav-btn" onclick="showScreen('home')">🏠 HOME</button>
   </div>
 </nav>
@@ -275,10 +274,13 @@
       </div>
       <div class="res-teams" id="resTeams">Teams: <strong>—</strong></div>
 
-      <div class="res-actions">
+      <div class="res-actions" id="resActionsAsk">
+        <button class="r-btn success"   onclick="handleCorrect()">✅ Yes, Correct!</button>
+        <button class="r-btn danger"    onclick="showWrongFlow()">❌ No, Wrong Guess</button>
+      </div>
+      <div class="res-actions" id="resActionsDone" style="display:none; flex-direction:column; gap:12px;">
+        <div style="color:var(--green); font-family:var(--font-head); font-size:28px; letter-spacing:1px; text-align:center; margin-bottom:6px;">🎉 I KNEW IT!</div>
         <button class="r-btn primary"   onclick="startGame()">🔄 Play Again</button>
-        <button class="r-btn secondary" onclick="showLeaderboard()">🏆 Leaderboard</button>
-        <button class="r-btn danger"    onclick="showWrongFlow()">❌ Wrong Guess?</button>
       </div>
 
       <!-- Wrong flow -->
@@ -293,14 +295,6 @@
   </div>
 </div>
 
-<!-- ══════════════ LEADERBOARD ══════════════ -->
-<div id="leaderboard" class="screen">
-  <div class="lb-head">
-    <div class="lb-title">🏆 Leaderboard</div>
-    <button class="back-btn" onclick="showScreen('home')">← Back</button>
-  </div>
-  <div id="lbBody"></div>
-</div>
 
 <!-- ══════════════ SCRIPTS ══════════════ -->
 <script src="../engine/probabilityEngine.js"></script>
@@ -471,12 +465,15 @@ function finalGuess() {
   confEl.style.color = conf >= 80 ? 'var(--green)' : conf >= 60 ? 'var(--gold)' : 'var(--red)';
 
   showScreen('result');
-  launchConfetti();
+  document.getElementById('resActionsAsk').style.display = 'flex';
+  document.getElementById('resActionsDone').style.display = 'none';
+  document.getElementById('wrongFlow').style.display = 'none';
+}
 
-  // Save to leaderboard
-  const lb = loadLeaderboard();
-  lb.unshift({ name: best.name, conf, q: G.qCount, score, date: new Date().toLocaleDateString('en-IN') });
-  localStorage.setItem('ipl_ak_lb', JSON.stringify(lb.slice(0, 25)));
+function handleCorrect() {
+  document.getElementById('resActionsAsk').style.display = 'none';
+  document.getElementById('resActionsDone').style.display = 'flex';
+  launchConfetti();
 }
 
 /* ═══════════════════════════════════════════════════════════

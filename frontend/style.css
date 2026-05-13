@@ -15,7 +15,7 @@
   --font-head:'Teko',sans-serif;--font-body:'Outfit',sans-serif
 }
 html,body{min-height:100vh;overflow-x:hidden}
-body{background:var(--bg);color:var(--text);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);-webkit-font-smoothing:antialiased;padding-top:66px}
 ::-webkit-scrollbar{width:6px}
 ::-webkit-scrollbar-track{background:var(--bg1)}
 ::-webkit-scrollbar-thumb{background:var(--muted2);border-radius:3px}
@@ -31,7 +31,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);-webkit
 @keyframes gD3{0%,100%{transform:translate(0,0)}50%{transform:translate(-45px,45px)}}
 
 /* ── NAV ───────────────────────────────────── */
-nav{position:relative;z-index:50;display:flex;align-items:center;justify-content:space-between;height:66px;padding:0 44px;background:rgba(3,6,14,.9);backdrop-filter:blur(22px);border-bottom:1px solid var(--border);box-shadow:0 2px 32px rgba(255,200,0,.05)}
+nav{position:fixed;top:0;left:0;width:100%;z-index:50;display:flex;align-items:center;justify-content:space-between;height:66px;padding:0 44px;background:rgba(3,6,14,.9);backdrop-filter:blur(22px);border-bottom:1px solid var(--border);box-shadow:0 2px 32px rgba(255,200,0,.05)}
 .logo-text{font-family:var(--font-head);font-size:32px;font-weight:700;letter-spacing:3px;line-height:1}
 .logo-text .ipl{color:var(--text)}
 .logo-text .ak{color:var(--gold);text-shadow:0 0 22px rgba(255,200,0,.45)}
@@ -344,6 +344,8 @@ h1.hero-title .w3{display:block;background:linear-gradient(120deg,var(--blue2),v
 .r-btn.secondary:hover{border-color:var(--gold);color:var(--gold);background:rgba(255,200,0,.05)}
 .r-btn.danger{background:transparent;border-color:rgba(255,59,59,.28);color:var(--red)}
 .r-btn.danger:hover{background:rgba(255,59,59,.07);border-color:var(--red)}
+.r-btn.success{background:transparent;border-color:rgba(0,230,118,.28);color:var(--green)}
+.r-btn.success:hover{background:rgba(0,230,118,.07);border-color:var(--green)}
 
 /* Wrong flow */
 .wrong-flow{margin-top:22px;padding:24px;background:rgba(255,59,59,.04);border:1px solid rgba(255,59,59,.2);border-radius:16px;text-align:left}
@@ -369,31 +371,7 @@ h1.hero-title .w3{display:block;background:linear-gradient(120deg,var(--blue2),v
 .comp-user{color:var(--gold)}
 .comp-db{color:var(--teal)}
 
-/* ═══════════════════════════════════════════
-   LEADERBOARD
-═══════════════════════════════════════════ */
-#leaderboard{flex-direction:column;padding:36px 44px;max-width:820px;margin:0 auto;width:100%}
-.lb-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
-.lb-title{font-family:var(--font-head);font-size:42px;font-weight:700;letter-spacing:2px;display:flex;align-items:center;gap:12px}
-.back-btn{display:flex;align-items:center;gap:6px;background:transparent;border:1px solid var(--border2);color:var(--muted);padding:10px 20px;border-radius:10px;cursor:pointer;font-family:var(--font-body);font-size:13px;font-weight:700;transition:all .22s}
-.back-btn:hover{border-color:var(--gold);color:var(--gold)}
-.lb-empty{text-align:center;padding:60px;color:var(--muted);font-size:16px}
-.lb-row{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px 24px;margin-bottom:10px;transition:transform .22s,border-color .22s}
-.lb-row:hover{transform:translateX(4px);border-color:var(--border2)}
-.lb-row.top1{border-color:rgba(255,200,0,.38);background:linear-gradient(135deg,rgba(255,200,0,.05),var(--card))}
-.lb-row.top2{border-color:rgba(192,192,192,.28)}
-.lb-row.top3{border-color:rgba(205,127,50,.28)}
-.lb-rank{font-family:var(--font-head);font-size:28px;font-weight:700;width:38px;text-align:center;flex-shrink:0}
-.lb-rank.gold{color:var(--gold);text-shadow:0 0 14px rgba(255,200,0,.5)}
-.lb-rank.silver{color:#c0c0c0}
-.lb-rank.bronze{color:#cd7f32}
-.lb-rank.norm{color:var(--muted2)}
-.lb-info{flex:1;min-width:0}
-.lb-pname{font-size:16px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.lb-meta{font-size:12px;color:var(--muted);margin-top:2px}
-.lb-score{text-align:right}
-.lb-pct{font-family:var(--font-head);font-size:30px;font-weight:700;color:var(--green);line-height:1}
-.lb-scr{font-size:12px;color:var(--muted)}
+
 
 /* ── Confetti ──────────────────────────────── */
 #confettiCanvas{position:fixed;inset:0;z-index:200;pointer-events:none;display:none}
