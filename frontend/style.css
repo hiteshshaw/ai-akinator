@@ -341,6 +341,7 @@ h1.hero-title .w3{display:block;background:linear-gradient(120deg,var(--blue2),v
    RESULT SCREEN
 ═══════════════════════════════════════════ */
 #result{flex-direction:column;align-items:center;justify-content:center;padding:44px 24px}
+#multiGuess{flex-direction:column;align-items:center;justify-content:center;padding:44px 24px}
 .result-outer{max-width:680px;width:100%}
 .result-card{background:var(--card);border:1px solid var(--border2);border-radius:28px;padding:50px 44px;text-align:center;position:relative;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.55)}
 .result-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold3),var(--gold),var(--teal),var(--blue2))}
