@@ -23,13 +23,13 @@ ipl_akinator/
 
 1. Open `frontend/index.html` in any modern browser (Chrome, Firefox, Edge).
 2. Think of an IPL player.
-3. Answer 8–12 Yes/No/Maybe/Don't Know questions.
+3. Answer <8 or =8 Yes/No/Maybe/Don't Know questions.
 4. The AI guesses your player!
 
 ## Features
 
 - **Gemini AI** generates natural, dramatic questions every round
-- **8–12 Questions** (min 8 enforced, max 12 forced guess)
+- **8 Questions** (max 8 forced guess)
 - **Bayesian probability engine** using information gain
 - **Live stats**: confidence %, entropy reduction, top suspects
 - **Self-learning DB**: wrong guess? Submit the correct player name
