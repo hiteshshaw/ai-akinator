@@ -150,14 +150,14 @@ app.post('/api/player-card', async (req, res) => {
         const wikiRes = await fetch(
             `https://en.wikipedia.org/w/api.php?action=query` +
             `&generator=search&gsrsearch=${encodeURIComponent(playerName + ' cricketer')}` +
-            `&gsrlimit=1&prop=pageimages&format=json&pithumbsize=600&origin=*`,
+            `&gsrlimit=5&prop=pageimages&format=json&pithumbsize=600&origin=*`,
             { headers: { "User-Agent": "IPLAkinatorBot/1.0 (hitesh@example.com)" } }
         );
         const wikiJson = await wikiRes.json();
         const pages  = wikiJson?.query?.pages || {};
-        const pageId = Object.keys(pages)[0];
-        if (pageId && pages[pageId]?.thumbnail?.source) {
-            imageUrl = pages[pageId].thumbnail.source;
+        const pageWithThumb = Object.values(pages).find(p => p.thumbnail?.source);
+        if (pageWithThumb) {
+            imageUrl = pageWithThumb.thumbnail.source;
         }
     } catch (_) {
         console.warn('[/api/player-card] Wikipedia image unavailable for', playerName);
