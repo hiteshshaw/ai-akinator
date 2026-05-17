@@ -498,7 +498,8 @@ function shouldGuessNow() {
 async function loadAndShowFlashcard(playerName, confPct) {
   let data = null;
   try {
-    const res = await fetch('http://localhost:3000/api/player-card', {
+    // Use relative URL so it works both locally AND when hosted
+    const res = await fetch('/api/player-card', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ playerName })
@@ -528,20 +529,38 @@ async function loadAndShowFlashcard(playerName, confPct) {
     achList.appendChild(li);
   });
 
-  // Photo — Wikipedia first, fallback to letter-avatar
-  const fallbackPhoto = `https://ui-avatars.com/api/?name=${encodeURIComponent(playerName)}&size=400&background=1a1a2e&color=ffc800&bold=true&font-size=0.33`;
-  document.getElementById('fcPhoto').src = data?.imageUrl || fallbackPhoto;
-
   // Confidence score
   document.getElementById('fcConfScore').textContent = `CONFIDENCE: ${confPct || 99}%`;
 
-  // Show the card
+  // Show the card early (without photo) so user sees content immediately
   document.getElementById('fcLoading').style.display      = 'none';
   document.getElementById('flashcard').style.display      = 'block';
   document.getElementById('stumpedJoke').style.display    = 'none';
   document.getElementById('resActionsAsk').style.display  = 'flex';
   document.getElementById('resActionsDone').style.display = 'none';
   document.getElementById('wrongFlow').style.display      = 'none';
+
+  // Photo loading: server imageUrl → client-side Wikipedia → letter avatar fallback
+  const fallbackPhoto = `https://ui-avatars.com/api/?name=${encodeURIComponent(playerName)}&size=400&background=1a1a2e&color=ffc800&bold=true&font-size=0.33`;
+  const photoEl = document.getElementById('fcPhoto');
+
+  if (data?.imageUrl) {
+    photoEl.src = data.imageUrl;
+  } else {
+    // Client-side Wikipedia fetch as fallback (CORS-enabled)
+    try {
+      const wUrl = `https://en.wikipedia.org/w/api.php?action=query&generator=search` +
+        `&gsrsearch=${encodeURIComponent(playerName + ' cricketer')}&gsrlimit=5` +
+        `&prop=pageimages&format=json&pithumbsize=600&origin=*`;
+      const wRes  = await fetch(wUrl);
+      const wJson = await wRes.json();
+      const pages = wJson?.query?.pages || {};
+      const hit   = Object.values(pages).find(p => p.thumbnail?.source);
+      photoEl.src = hit ? hit.thumbnail.source : fallbackPhoto;
+    } catch(_) {
+      photoEl.src = fallbackPhoto;
+    }
+  }
 }
 
 function answer(resp) {
@@ -645,7 +664,7 @@ async function showStumpedScreen() {
   document.getElementById('stumpedJoke').style.display = 'block';
   document.getElementById('sjText').textContent = "Generating excuse...";
   try {
-    const res = await fetch('http://localhost:3000/api/joke', { method: 'POST' });
+    const res = await fetch('/api/joke', { method: 'POST' });
     const data = await res.json();
     document.getElementById('sjText').textContent = `"${data.joke}"`;
   } catch(e) {

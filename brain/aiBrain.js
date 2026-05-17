@@ -4,7 +4,7 @@
  */
 "use strict";
 
-const BACKEND_URL = "http://localhost:3000";
+const BACKEND_URL = ""; // Relative URL — works locally AND on any hosted platform
 
 const FALLBACK_QUESTIONS = {
   overseas: [
