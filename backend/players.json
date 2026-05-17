@@ -14,7 +14,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Virat Kohli",
@@ -31,7 +39,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "TRUE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Rohit Sharma",
@@ -48,7 +64,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Jasprit Bumrah",
@@ -65,7 +89,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Andre Russell",
@@ -82,7 +114,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Sunil Narine",
@@ -99,7 +139,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "AB de Villiers",
@@ -116,7 +164,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "David Warner",
@@ -133,7 +189,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "TRUE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Rashid Khan",
@@ -150,7 +214,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Hardik Pandya",
@@ -167,7 +239,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "KL Rahul",
@@ -184,7 +264,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "TRUE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Rishabh Pant",
@@ -201,7 +289,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Shubman Gill",
@@ -218,7 +314,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "TRUE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Suryakumar Yadav",
@@ -235,7 +339,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Yuzvendra Chahal",
@@ -252,7 +364,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "TRUE"
   },
   {
     "name": "Ravindra Jadeja",
@@ -269,7 +389,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Jos Buttler",
@@ -286,7 +414,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "TRUE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Faf du Plessis",
@@ -303,7 +439,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Glenn Maxwell",
@@ -320,7 +464,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Dinesh Karthik",
@@ -337,7 +489,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Trent Boult",
@@ -354,7 +514,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Pat Cummins",
@@ -371,7 +539,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Heinrich Klaasen",
@@ -388,7 +564,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Aiden Markram",
@@ -405,7 +589,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Mohammed Shami",
@@ -422,7 +614,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Arshdeep Singh",
@@ -439,7 +639,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Sanju Samson",
@@ -456,7 +664,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Nitish Rana",
@@ -473,7 +689,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Axar Patel",
@@ -490,7 +714,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Kuldeep Yadav",
@@ -507,7 +739,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Mitchell Starc",
@@ -524,7 +764,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Quinton de Kock",
@@ -541,7 +789,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Nicholas Pooran",
@@ -558,7 +814,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Marcus Stoinis",
@@ -575,7 +839,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Ruturaj Gaikwad",
@@ -592,7 +864,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "TRUE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Devon Conway",
@@ -609,7 +889,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Deepak Chahar",
@@ -626,7 +914,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Shreyas Iyer",
@@ -643,7 +939,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Ishan Kishan",
@@ -660,7 +964,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Tilak Varma",
@@ -677,7 +989,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Cameron Green",
@@ -694,7 +1014,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Mohit Sharma",
@@ -711,7 +1039,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "TRUE"
   },
   {
     "name": "Sai Sudharsan",
@@ -728,7 +1064,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Rahul Tewatia",
@@ -745,7 +1089,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Prithvi Shaw",
@@ -762,7 +1114,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Anrich Nortje",
@@ -779,7 +1139,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Kagiso Rabada",
@@ -796,7 +1164,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "TRUE"
   },
   {
     "name": "Liam Livingstone",
@@ -813,7 +1189,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Mayank Agarwal",
@@ -830,7 +1214,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "TRUE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Bhuvneshwar Kumar",
@@ -847,7 +1239,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "TRUE"
   },
   {
     "name": "Varun Chakravarthy",
@@ -864,7 +1264,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Chris Gayle",
@@ -881,7 +1289,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "TRUE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Lasith Malinga",
@@ -898,7 +1314,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "TRUE"
   },
   {
     "name": "Kieron Pollard",
@@ -915,7 +1339,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Harbhajan Singh",
@@ -932,7 +1364,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "TRUE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Gautam Gambhir",
@@ -949,7 +1389,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "TRUE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Robin Uthappa",
@@ -966,7 +1414,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "TRUE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Suresh Raina",
@@ -983,7 +1439,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Shane Watson",
@@ -1000,7 +1464,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "TRUE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Yusuf Pathan",
@@ -1017,7 +1489,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Irfan Pathan",
@@ -1034,7 +1514,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Shikhar Dhawan",
@@ -1051,7 +1539,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "TRUE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Ajinkya Rahane",
@@ -1068,7 +1564,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Ravichandran Ashwin",
@@ -1085,7 +1589,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "TRUE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Morne Morkel",
@@ -1102,7 +1614,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Dale Steyn",
@@ -1119,7 +1639,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "TRUE"
   },
   {
     "name": "Brendon McCullum",
@@ -1136,7 +1664,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "TRUE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Adam Gilchrist",
@@ -1153,7 +1689,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "TRUE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Virender Sehwag",
@@ -1170,7 +1714,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Zaheer Khan",
@@ -1187,7 +1739,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Pragyan Ojha",
@@ -1204,7 +1764,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Amit Mishra",
@@ -1221,7 +1789,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "TRUE"
   },
   {
     "name": "Piyush Chawla",
@@ -1238,7 +1814,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Manish Pandey",
@@ -1255,7 +1839,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Ambati Rayudu",
@@ -1272,7 +1864,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Dwayne Bravo",
@@ -1289,7 +1889,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "TRUE"
   },
   {
     "name": "Imran Tahir",
@@ -1306,7 +1914,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "TRUE"
   },
   {
     "name": "Muttiah Muralitharan",
@@ -1323,7 +1939,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Shaun Marsh",
@@ -1340,7 +1964,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "TRUE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Murali Vijay",
@@ -1357,7 +1989,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Parthiv Patel",
@@ -1374,7 +2014,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Wriddhiman Saha",
@@ -1391,7 +2039,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Rahul Dravid",
@@ -1408,7 +2064,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "TRUE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Jacques Kallis",
@@ -1425,7 +2089,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Kevin Pietersen",
@@ -1442,7 +2114,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Eoin Morgan",
@@ -1459,7 +2139,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Ben Stokes",
@@ -1476,7 +2164,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Rahul Tripathi",
@@ -1493,7 +2189,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Washington Sundar",
@@ -1510,7 +2214,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Krunal Pandya",
@@ -1527,7 +2239,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Avesh Khan",
@@ -1544,7 +2264,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Rinku Singh",
@@ -1561,7 +2289,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Navdeep Saini",
@@ -1578,7 +2314,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Chris Morris",
@@ -1595,7 +2339,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "JP Duminy",
@@ -1612,7 +2364,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Rahul Chahar",
@@ -1629,7 +2389,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Nathan Coulter-Nile",
@@ -1646,7 +2414,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Kane Williamson",
@@ -1663,7 +2439,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Mohsin Khan",
@@ -1680,7 +2464,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "T Natarajan",
@@ -1697,7 +2489,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Devdutt Padikkal",
@@ -1714,7 +2514,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Riyan Parag",
@@ -1731,7 +2539,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Devdutt Padikkal",
@@ -1748,7 +2564,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Riyan Parag",
@@ -1765,7 +2589,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Harshal Patel",
@@ -1782,7 +2614,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "TRUE"
   },
   {
     "name": "Prasidh Krishna",
@@ -1799,7 +2639,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Umesh Yadav",
@@ -1816,7 +2664,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Shardul Thakur",
@@ -1833,7 +2689,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Mukesh Kumar",
@@ -1850,7 +2714,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Khaleel Ahmed",
@@ -1867,7 +2739,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "R Sai Kishore",
@@ -1884,7 +2764,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Noor Ahmad",
@@ -1901,7 +2789,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Rahmanullah Gurbaz",
@@ -1918,7 +2814,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Phil Salt",
@@ -1935,7 +2839,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Tim David",
@@ -1952,7 +2864,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Romario Shepherd",
@@ -1969,7 +2889,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Gerald Coetzee",
@@ -1986,7 +2914,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Naveen-ul-Haq",
@@ -2003,7 +2939,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Yashasvi Jaiswal",
@@ -2020,7 +2964,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "TRUE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Dhruv Jurel",
@@ -2037,7 +2989,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Shimron Hetmyer",
@@ -2054,7 +3014,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Tristan Stubbs",
@@ -2071,7 +3039,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Jake Fraser-McGurk",
@@ -2088,7 +3064,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Abhishek Sharma",
@@ -2105,7 +3089,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Mayank Yadav",
@@ -2122,7 +3114,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Rachin Ravindra",
@@ -2139,7 +3139,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Matheesha Pathirana",
@@ -2156,7 +3164,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Tushar Deshpande",
@@ -2173,7 +3189,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Ravi Bishnoi",
@@ -2190,7 +3214,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Ayush Badoni",
@@ -2207,7 +3239,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Nehal Wadhera",
@@ -2224,7 +3264,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Venkatesh Iyer",
@@ -2241,7 +3289,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Nitish Kumar Reddy",
@@ -2258,7 +3314,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Harshit Rana",
@@ -2275,7 +3339,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Sandeep Sharma",
@@ -2292,7 +3364,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Yash Dayal",
@@ -2309,7 +3389,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Akash Madhwal",
@@ -2326,7 +3414,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Kumar Kartikeya",
@@ -2343,7 +3439,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Shahbaz Ahmed",
@@ -2360,7 +3464,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Rahul Sharma",
@@ -2377,7 +3489,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Lendl Simmons",
@@ -2394,7 +3514,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Corey Anderson",
@@ -2411,7 +3539,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Albie Morkel",
@@ -2428,7 +3564,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Doug Bollinger",
@@ -2445,7 +3589,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Michael Hussey",
@@ -2462,7 +3614,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Brad Hodge",
@@ -2479,7 +3639,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Siddarth Kaul",
@@ -2496,7 +3664,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Kedar Jadhav",
@@ -2513,7 +3689,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Karun Nair",
@@ -2530,7 +3714,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Rahul Tewatia",
@@ -2547,7 +3739,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Mandeep Singh",
@@ -2564,7 +3764,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Evin Lewis",
@@ -2581,7 +3789,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Mustafizur Rahman",
@@ -2598,7 +3814,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Jason Holder",
@@ -2615,7 +3839,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Steve Smith",
@@ -2632,7 +3864,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Shane Warne",
@@ -2649,7 +3889,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "TRUE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Sanath Jayasuriya",
@@ -2666,7 +3914,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Tilakaratne Dilshan",
@@ -2683,7 +3939,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Ross Taylor",
@@ -2700,7 +3964,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Kumar Sangakkara",
@@ -2717,7 +3989,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "TRUE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Mahela Jayawardene",
@@ -2734,7 +4014,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "TRUE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Sohail Tanvir",
@@ -2751,7 +4039,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "TRUE"
   },
   {
     "name": "Andrew Symonds",
@@ -2768,7 +4064,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Graeme Smith",
@@ -2785,7 +4089,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Brad Haddin",
@@ -2802,7 +4114,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Nathan McCullum",
@@ -2819,7 +4139,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Thisara Perera",
@@ -2836,7 +4164,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Darren Sammy",
@@ -2853,7 +4189,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Marlon Samuels",
@@ -2870,7 +4214,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Dwayne Smith",
@@ -2887,7 +4239,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Laxmipathy Balaji",
@@ -2904,7 +4264,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "RP Singh",
@@ -2921,7 +4289,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Ashok Dinda",
@@ -2938,7 +4314,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Praveen Kumar",
@@ -2955,7 +4339,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Munaf Patel",
@@ -2972,24 +4364,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
-  },
-  {
-    "name": "S Badrinath",
-    "overseas": "FALSE",
-    "role": "Batsman",
-    "teams_played": "CSK,RCB",
-    "captain": "FALSE",
-    "active": "FALSE",
-    "opener": "FALSE",
-    "finisher": "TRUE",
-    "spinner": "FALSE",
-    "pace_bowler": "FALSE",
-    "wicketkeeper": "FALSE",
-    "aggressive": "FALSE",
-    "death_bowler": "FALSE",
-    "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Subramaniam Badrinath",
@@ -3006,7 +4389,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Manvinder Bisla",
@@ -3023,7 +4414,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Paul Valthaty",
@@ -3040,7 +4439,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Swapnil Asnodkar",
@@ -3057,7 +4464,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Kamran Khan",
@@ -3074,7 +4489,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Amit Tandon",
@@ -3091,7 +4514,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Iqbal Abdulla",
@@ -3108,7 +4539,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Joginder Sharma",
@@ -3125,7 +4564,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Pawan Negi",
@@ -3142,7 +4589,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Stuart Binny",
@@ -3159,7 +4614,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Naman Ojha",
@@ -3176,7 +4639,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Karn Sharma",
@@ -3193,7 +4664,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Manpreet Gony",
@@ -3210,7 +4689,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Abu Nechim",
@@ -3227,7 +4714,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Pravin Tambe",
@@ -3244,7 +4739,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Shreyas Gopal",
@@ -3261,7 +4764,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Sandeep Lamichhane",
@@ -3278,7 +4789,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Carlos Brathwaite",
@@ -3295,7 +4814,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Tom Curran",
@@ -3312,7 +4839,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Sam Curran",
@@ -3329,7 +4864,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Nathan Ellis",
@@ -3346,7 +4889,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Lockie Ferguson",
@@ -3363,7 +4914,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Adam Zampa",
@@ -3380,7 +4939,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Daniel Sams",
@@ -3397,7 +4964,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Dewald Brevis",
@@ -3414,7 +4989,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Priyam Garg",
@@ -3431,7 +5014,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Anukul Roy",
@@ -3448,7 +5039,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Chetan Sakariya",
@@ -3465,7 +5064,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "",
@@ -3482,7 +5089,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Rajat Bhatia",
@@ -3499,7 +5114,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Rahul Sharma",
@@ -3516,7 +5139,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Varun Aaron",
@@ -3533,7 +5164,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Ashish Nehra",
@@ -3550,7 +5189,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "TRUE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Vinay Kumar",
@@ -3567,7 +5214,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Dhawal Kulkarni",
@@ -3584,7 +5239,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Pankaj Singh",
@@ -3601,7 +5264,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Rishi Dhawan",
@@ -3618,7 +5289,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Basil Thampi",
@@ -3635,7 +5314,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Ishant Sharma",
@@ -3652,7 +5339,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Sreesanth",
@@ -3669,7 +5364,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "R Vinay Kumar",
@@ -3686,7 +5389,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Manoj Tiwary",
@@ -3703,7 +5414,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Murugan Ashwin",
@@ -3720,7 +5439,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Sarfaraz Khan",
@@ -3737,7 +5464,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Shahbaz Nadeem",
@@ -3754,7 +5489,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Amitoze Singh",
@@ -3771,7 +5514,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Prerak Mankad",
@@ -3788,7 +5539,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Yash Thakur",
@@ -3805,7 +5564,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Akash Singh",
@@ -3822,7 +5589,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "K Gowtham",
@@ -3839,7 +5614,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Anmolpreet Singh",
@@ -3856,7 +5639,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Priyank Panchal",
@@ -3873,7 +5664,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Tanmay Agarwal",
@@ -3890,7 +5689,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Saurabh Kumar",
@@ -3907,7 +5714,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "TRUE"
+    "played_defunct_team": "TRUE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "M Siddharth",
@@ -3924,7 +5739,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Swapnil Singh",
@@ -3941,7 +5764,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Arjun Tendulkar",
@@ -3958,7 +5789,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Rasikh Salam",
@@ -3975,7 +5814,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Yudhvir Singh",
@@ -3992,7 +5839,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Kuldip Yadav",
@@ -4009,7 +5864,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "TRUE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Shivam Mavi",
@@ -4026,7 +5889,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Kamlesh Nagarkoti",
@@ -4043,7 +5914,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Abdul Samad",
@@ -4060,7 +5939,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Abhishek Porel",
@@ -4077,7 +5964,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "KS Bharat",
@@ -4094,7 +5989,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Mandeep Singh",
@@ -4111,7 +6014,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Suyash Sharma",
@@ -4128,7 +6039,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Anuj Rawat",
@@ -4145,7 +6064,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "TRUE",
+    "right_handed_batsman": "FALSE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Ripal Patel",
@@ -4162,7 +6089,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Rajvardhan Hangargekar",
@@ -4179,7 +6114,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Simarjeet Singh",
@@ -4196,7 +6139,15 @@
     "aggressive": "FALSE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Hrithik Shokeen",
@@ -4213,7 +6164,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Naman Dhir",
@@ -4230,7 +6189,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Sameer Rizvi",
@@ -4247,7 +6214,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Shashank Singh",
@@ -4264,7 +6239,15 @@
     "aggressive": "TRUE",
     "death_bowler": "TRUE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Vijay Shankar",
@@ -4281,7 +6264,15 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Sai Kishore",
@@ -4298,7 +6289,15 @@
     "aggressive": "FALSE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "TRUE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "TRUE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "TRUE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   },
   {
     "name": "Mohit Rathee",
@@ -4315,6 +6314,14 @@
     "aggressive": "TRUE",
     "death_bowler": "FALSE",
     "played_multiple_teams": "FALSE",
-    "played_defunct_team": "FALSE"
+    "played_defunct_team": "FALSE",
+    "won_ipl_title": "FALSE",
+    "is_coach_right_now": "FALSE",
+    "left_handed_batsman": "FALSE",
+    "right_handed_batsman": "TRUE",
+    "left_handed_bowler": "FALSE",
+    "right_handed_bowler": "FALSE",
+    "orange_cap": "FALSE",
+    "purple_cap": "FALSE"
   }
 ]

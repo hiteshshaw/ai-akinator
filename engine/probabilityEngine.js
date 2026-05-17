@@ -20,12 +20,37 @@ const ATTRIBUTES = [
   { key: "role_bat", label: "primarily a specialist batsman" },
   { key: "role_bowl", label: "primarily a specialist bowler" },
   { key: "role_ar", label: "an all-rounder who both bats and bowls" },
+  { key: "team_csk", label: "has played for Chennai Super Kings (CSK)" },
+  { key: "team_mi", label: "has played for Mumbai Indians (MI)" },
+  { key: "team_rcb", label: "has played for Royal Challengers Bangalore (RCB)" },
+  { key: "team_kkr", label: "has played for Kolkata Knight Riders (KKR)" },
+  { key: "team_srh", label: "has played for Sunrisers Hyderabad (SRH)" },
+  { key: "team_rr", label: "has played for Rajasthan Royals (RR)" },
+  { key: "team_dc", label: "has played for Delhi Capitals or Delhi Daredevils (DC/DD)" },
+  { key: "team_pbks", label: "has played for Punjab Kings or Kings XI Punjab (PBKS/KXIP)" },
+  { key: "team_gt", label: "has played for Gujarat Titans (GT)" },
+  { key: "team_lsg", label: "has played for Lucknow Super Giants (LSG)" },
 ];
 
 function getAttrValue(player, key) {
   if (key === "role_bat") return player.role === "Batsman" || player.role === "WK-Batsman";
   if (key === "role_bowl") return player.role === "Bowler";
   if (key === "role_ar") return player.role === "All-rounder";
+  
+  if (key.startsWith("team_")) {
+    const team = key.split("_")[1].toUpperCase();
+    if (!player.teams_played) return false;
+    
+    // Map aliases for teams that changed names
+    const aliases = {
+      'DC': ['DC', 'DD'],
+      'PBKS': ['PBKS', 'KXIP'],
+    };
+    const teamList = player.teams_played.split(',').map(t => t.trim().toUpperCase());
+    const validNames = aliases[team] || [team];
+    return validNames.some(t => teamList.includes(t));
+  }
+
   return player[key] === "TRUE";
 }
 
@@ -39,10 +64,12 @@ function calcEntropy(weights) {
 }
 
 function bestAttribute(players, weights, usedKeys) {
-  // Force the first question to always be about the "overseas" trait
+  // Randomize the first question to prevent repetitive starts
   if (usedKeys.length === 0) {
-    const overseasAttr = ATTRIBUTES.find(a => a.key === 'overseas');
-    if (overseasAttr) return overseasAttr;
+    const starters = ['overseas', 'active', 'role_bat', 'role_bowl', 'captain', 'played_multiple_teams'];
+    const randomKey = starters[Math.floor(Math.random() * starters.length)];
+    const attr = ATTRIBUTES.find(a => a.key === randomKey);
+    if (attr) return attr;
   }
 
   const avail = ATTRIBUTES.filter(a => !usedKeys.includes(a.key));

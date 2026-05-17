@@ -33,7 +33,7 @@
 <div id="home" class="screen active">
 
   <!-- Hero pitch banner -->
-  <div class="pitch-hero">
+  <div class="pitch-hero" style="animation: fadeInUp 0.8s ease forwards;">
     <div class="pitch-glow-ball"></div>
 
     <!-- Decorative stumps left -->
@@ -50,11 +50,11 @@
         <span class="w3">IPL PLAYER!</span>
       </h1>
       <p class="hero-sub">Think of any IPL cricketer from any season. The Gemini-powered AI 
-will analyse your answers and identify the player in 8 smart questions or less.</p>
+will analyse your answers and identify the player in 8-12 smart questions (or more if needed!).</p>
       <div class="hero-stats">
         <div class="hst"><div class="hst-num c1">250+</div><div class="hst-lbl">Players</div></div>
         <div class="hst"><div class="hst-num c2">AI</div><div class="hst-lbl">Gemini Brain</div></div>
-        <div class="hst"><div class="hst-num c3">8</div><div 
+        <div class="hst"><div class="hst-num c3">8-12+</div><div 
 class="hst-lbl">Questions</div></div>
         <div class="hst"><div class="hst-num c4">17+</div><div class="hst-lbl">IPL Seasons</div></div>
       </div>
@@ -78,7 +78,7 @@ class="hst-lbl">Questions</div></div>
   </div>
 
   <!-- Trust Badges -->
-  <div class="trust-badges">
+  <div class="trust-badges" style="animation: fadeInUp 0.8s ease 0.2s forwards; opacity:0;">
     <div class="trust-badge"><span class="tb-icon">🛡️</span> 100% SAFE & PRIVATE</div>
     <div class="trust-badge divider"></div>
     <div class="trust-badge"><span class="tb-icon">⚡</span> INSTANT AI ANALYSIS</div>
@@ -102,7 +102,7 @@ class="hst-lbl">Questions</div></div>
   </div>
 
   <!-- Feature cards -->
-  <div class="features-grid">
+  <div class="features-grid" style="animation: fadeInUp 0.8s ease 0.4s forwards; opacity:0;">
     <div class="feat-card">
       <span class="feat-icon">👥</span>
       <div class="feat-title">250+ Players</div>
@@ -163,7 +163,7 @@ class="hst-lbl">Questions</div></div>
     <div class="prog-wrap">
       <div class="prog-top">
         <span class="prog-label">Question Progress</span>
-        <span class="prog-val" id="pbVal">0 / 8</span>
+        <span class="prog-val" id="pbVal">0 / 12</span>
       </div>
       <div class="prog-track"><div class="prog-fill" id="pbFill"></div></div>
     </div>
@@ -257,38 +257,69 @@ class="hst-lbl">Questions</div></div>
 <!-- ══════════════ RESULT ══════════════ -->
 <div id="result" class="screen">
   <div class="result-outer">
-    <div class="result-card">
-      <span class="trophy-wrap">🏆</span>
-      <div class="res-label">You were thinking of…</div>
-      <div class="res-name"  id="resName">MS Dhoni</div>
-      <div class="res-badge" id="resBadge">WK-Batsman · CSK</div>
+    
+    <!-- Loading State -->
+    <div id="fcLoading" class="fc-loading">
+      <div class="fc-spinner"></div>
+      <div style="color:var(--gold); margin-top:16px; font-family:var(--font-head); font-size:24px; letter-spacing:1px">ANALYZING PLAYER...</div>
+    </div>
 
-      <div class="res-conf-row">
-        <div class="res-conf-num" id="resConf">85%</div>
-        <div class="res-conf-lbl">Confidence</div>
-      </div>
-      <div class="res-conf-bar-wrap">
-        <div class="res-conf-bar" id="resConfBar" style="width:0%"></div>
-      </div>
+    <!-- The Premium Flashcard -->
+    <div id="flashcard" class="flashcard-ui" style="display:none">
+      <div class="fc-layout">
+        <!-- Left Photo -->
+        <div class="fc-left">
+          <img id="fcPhoto" src="" alt="Player Photo">
+        </div>
+        
+        <!-- Center Info -->
+        <div class="fc-center">
+          <div class="fc-header" style="display:flex; align-items:center; gap:20px;">
+            <div style="flex:1;">
+              <h1 id="fcName" class="fc-name">PLAYER NAME</h1>
+              <div style="display:flex; align-items:center; gap:12px; margin-top:12px;">
+                <div id="fcNickname" class="fc-nickname" style="margin-top:0;">NICKNAME</div>
+                <div id="fcConfScore" style="background:rgba(255,200,0,0.15); border:1px solid var(--gold); padding:4px 10px; border-radius:12px; color:var(--gold); font-size:12px; font-weight:bold; letter-spacing:1px; white-space:nowrap;">CONFIDENCE: 99%</div>
+              </div>
+            </div>
+            <div style="font-size:72px; line-height:1; filter:drop-shadow(0 0 20px rgba(255,200,0,0.4));">🏏</div>
+          </div>
+          
+          <div class="fc-grid-4">
+            <div class="fc-box"><div class="fc-box-lbl">TEAM</div><div id="fcTeam" class="fc-box-val">TEAM</div></div>
+            <div class="fc-box"><div class="fc-box-lbl">ROLE</div><div id="fcRole" class="fc-box-val">ROLE</div></div>
+            <div class="fc-box"><div class="fc-box-lbl">BATTING</div><div id="fcBat" class="fc-box-val">BAT</div></div>
+            <div class="fc-box"><div class="fc-box-lbl">BOWLING</div><div id="fcBowl" class="fc-box-val">BOWL</div></div>
+          </div>
+          
+          <div class="fc-split">
+            <div class="fc-achievements">
+              <div class="fc-section-title">ACHIEVEMENTS</div>
+              <ul id="fcAchList"></ul>
+            </div>
+            <div class="fc-fun-fact">
+              <div class="fc-section-title">💡 FUN FACT</div>
+              <p id="fcFunFact"></p>
+            </div>
+          </div>
+        </div>
+        
+        </div>
 
-      <div class="res-stats-grid">
-        <div class="rs-box"><div class="rs-num" id="rsQ" style="color:var(--blue2)">8</div><div class="rs-lbl">Questions</div></div>
-        <div class="rs-box"><div class="rs-num" id="rsC" style="color:var(--gold)">3</div><div class="rs-lbl">Candidates</div></div>
-        <div class="rs-box"><div class="rs-num" id="rsS" style="color:var(--green)">9.1</div><div class="rs-lbl">Score</div></div>
       </div>
-      <div class="res-teams" id="resTeams">Teams: <strong>—</strong></div>
-
-      <div class="res-actions" id="resActionsAsk">
-        <button class="r-btn success"   onclick="handleCorrect()">✅ Yes, Correct!</button>
-        <button class="r-btn danger"    onclick="showWrongFlow()">❌ No, Wrong Guess</button>
+      
+      <!-- Action buttons -->
+      <div class="res-actions" id="resActionsAsk" style="margin-top:20px;justify-content:center;">
+        <button class="r-btn success" onclick="handleCorrect()">✅ Yes, Correct!</button>
+        <button class="r-btn danger"  onclick="showWrongFlow()">❌ No, Wrong Guess</button>
       </div>
-      <div class="res-actions" id="resActionsDone" style="display:none; flex-direction:column; gap:12px;">
+      <div class="res-actions" id="resActionsDone" style="display:none; flex-direction:column; gap:12px; margin-top:20px;">
         <div style="color:var(--green); font-family:var(--font-head); font-size:28px; letter-spacing:1px; text-align:center; margin-bottom:6px;">🎉 I KNEW IT!</div>
-        <button class="r-btn primary"   onclick="startGame()">🔄 Play Again</button>
+        <button class="r-btn primary" onclick="startGame()">🔄 Play Again</button>
       </div>
 
       <!-- Wrong flow -->
-      <div class="wrong-flow" id="wrongFlow" style="display:none">
+      <div class="wrong-flow" id="wrongFlow" style="display:none; margin-top:20px; max-width:800px; margin-left:auto; margin-right:auto;">
         <div class="wf-title">❌ Who were you actually thinking of?</div>
         <input type="text" class="wf-input" id="wfInput" placeholder="Type the player's full name…" autocomplete="off"/>
         <button class="wf-submit" onclick="submitCorrection()">➕ SUBMIT &amp; UPDATE DATABASE</button>
@@ -296,6 +327,23 @@ class="hst-lbl">Questions</div></div>
         <div id="comparisonBox" class="comparison-box" style="display:none"></div>
       </div>
     </div>
+
+    <!-- Joke Container for Stumped -->
+    <div id="stumpedJoke" class="stumped-joke" style="display:none">
+      <div class="sj-title">😵 I AM STUMPED!</div>
+      <div id="sjText" class="sj-text">Generating excuse...</div>
+      <div class="wrong-flow" style="display:block; margin-top:20px; max-width:800px; margin-left:auto; margin-right:auto; background:var(--bg3);">
+        <div class="wf-title">Who were you actually thinking of?</div>
+        <input type="text" class="wf-input" id="wfInputStump" placeholder="Type the player's full name…" autocomplete="off"/>
+        <button class="wf-submit" onclick="submitCorrectionStump()">➕ TEACH ME & UPDATE DB</button>
+        <div class="wf-msg" id="wfMsgStump"></div>
+        <div id="comparisonBoxStump" class="comparison-box" style="display:none"></div>
+      </div>
+      <div style="text-align:center">
+          <button class="r-btn primary" onclick="startGame()" style="margin-top:20px">🔄 Play Again</button>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -352,8 +400,8 @@ const G = {
   weights: [],
   history: [],
   qCount: 0,
-  MIN_Q: 4,
-  MAX_Q: 8,
+  MIN_Q: 8,
+  MAX_Q: 12,
   curAttr: null,
   curQ: null,
   initEntropy: 0,
@@ -386,7 +434,7 @@ function startGame() {
   updateDBSizeUI();
   document.getElementById('qNumDisp').textContent    = '1';
   document.getElementById('entropyDisp').textContent = '0%';
-  document.getElementById('pbVal').textContent       = '0 / 8';
+  document.getElementById('pbVal').textContent       = '0 / 12';
   document.getElementById('pbFill').style.width      = '0%';
   document.getElementById('candList').innerHTML      =
     '<div style="text-align:center;color:var(--muted);padding:24px;font-size:13px">Awaiting first answer…</div>';
@@ -415,8 +463,8 @@ async function doNextQuestion() {
   G.curAttr = attr.key;
   G.qCount++;
   document.getElementById('qNumDisp').textContent = G.qCount;
-  document.getElementById('pbVal').textContent    = `${G.qCount} / 8`;
-  document.getElementById('pbFill').style.width   = `${Math.round(G.qCount / G.MAX_Q * 100)}%`;
+  document.getElementById('pbVal').textContent    = `${G.qCount} / ${Math.max(G.MAX_Q, G.qCount)}`;
+  document.getElementById('pbFill').style.width   = `${Math.min(100, Math.round(G.qCount / G.MAX_Q * 100))}%`;
 
   showThinking();
   setAnswersEnabled(false);
@@ -439,15 +487,63 @@ function hasClearLeader(weights, margin = 0.07) {
 function shouldGuessNow() {
   const conf = getConfidence(G.weights);
   const q    = G.qCount;
-  if (q < G.MIN_Q)  return false;               // must ask at least 4
-  if (q >= G.MAX_Q) return true;                // forced at Q8 regardless
-  if (conf >= 85 && hasClearLeader(G.weights)) return true; // clear winner early
-  return false;
+  if (q < G.MIN_Q)  return false;               // must ask at least MIN_Q
+  if (conf >= 85 && hasClearLeader(G.weights)) return true; // guess when confident
+  return false; // otherwise keep asking even beyond MAX_Q until 85%
 }
 
 /* ═══════════════════════════════════════════════════════════
    ANSWER HANDLER — no persistent CSS class added
 ═══════════════════════════════════════════════════════════ */
+async function loadAndShowFlashcard(playerName, confPct) {
+  let data = null;
+  try {
+    const res = await fetch('http://localhost:3000/api/player-card', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ playerName })
+    });
+    data = await res.json();
+  } catch(e) {
+    console.error("Network error loading flashcard:", e);
+    data = null;
+  }
+
+  const d = data?.details || {};
+
+  // Always populate the flashcard — never fail silently
+  document.getElementById('fcName').textContent      = playerName;
+  document.getElementById('fcNickname').textContent  = d.nickname        || '⭐ IPL SUPERSTAR';
+  document.getElementById('fcTeam').textContent      = d.primary_team    || '-';
+  document.getElementById('fcRole').textContent      = d.specific_role   || '-';
+  document.getElementById('fcBat').textContent       = d.batting_style   || '-';
+  document.getElementById('fcBowl').textContent      = d.bowling_style   || '-';
+  document.getElementById('fcFunFact').textContent   = d.fun_fact        || `${playerName} is an iconic IPL player!`;
+
+  const achList = document.getElementById('fcAchList');
+  achList.innerHTML = '';
+  (d.achievements?.length ? d.achievements : [`${playerName} — Legendary IPL Player`]).forEach(ach => {
+    const li = document.createElement('li');
+    li.textContent = ach;
+    achList.appendChild(li);
+  });
+
+  // Photo — Wikipedia first, fallback to letter-avatar
+  const fallbackPhoto = `https://ui-avatars.com/api/?name=${encodeURIComponent(playerName)}&size=400&background=1a1a2e&color=ffc800&bold=true&font-size=0.33`;
+  document.getElementById('fcPhoto').src = data?.imageUrl || fallbackPhoto;
+
+  // Confidence score
+  document.getElementById('fcConfScore').textContent = `CONFIDENCE: ${confPct || 99}%`;
+
+  // Show the card
+  document.getElementById('fcLoading').style.display      = 'none';
+  document.getElementById('flashcard').style.display      = 'block';
+  document.getElementById('stumpedJoke').style.display    = 'none';
+  document.getElementById('resActionsAsk').style.display  = 'flex';
+  document.getElementById('resActionsDone').style.display = 'none';
+  document.getElementById('wrongFlow').style.display      = 'none';
+}
+
 function answer(resp) {
   if (!G.active || !G.curAttr) return;
 
@@ -490,36 +586,21 @@ function finalGuess() {
     // Show multi-guess flow
     G_tiedCandidates = tied;
     G_tiedIndex = 0;
-    document.getElementById('rsQ').textContent = G.qCount;
-    document.getElementById('rsC').textContent = active;
-    document.getElementById('rsS').textContent = score;
     showMultiGuess();
     return;
   }
 
   // Single clear winner
   const best = top[0].player;
-  document.getElementById('resName').textContent  = best.name;
-  document.getElementById('resBadge').textContent = `${best.role} · ${best.teams_played}`;
-  document.getElementById('resConf').textContent  = conf + '%';
-  document.getElementById('rsQ').textContent      = G.qCount;
-  document.getElementById('rsC').textContent      = active;
-  document.getElementById('rsS').textContent      = score;
-  document.getElementById('resTeams').innerHTML   =
-    `Teams: <strong>${best.teams_played.split(',').join(' · ')}</strong>`;
-
-  const confBar = document.getElementById('resConfBar');
-  confBar.style.width = '0%';
-  setTimeout(() => { confBar.style.width = conf + '%'; }, 120);
-
-  const confEl = document.getElementById('resConf');
-  confEl.style.color = conf >= 80 ? 'var(--green)' : conf >= 60 ? 'var(--gold)' : 'var(--red)';
-
+  const bestPct = Math.round(top[0].weight * 100);
+  
   showScreen('result');
-  document.getElementById('resActionsAsk').style.display = 'flex';
-  document.getElementById('resActionsDone').style.display = 'none';
-  document.getElementById('wrongFlow').style.display = 'none';
+  document.getElementById('fcLoading').style.display = 'flex';
+  document.getElementById('flashcard').style.display = 'none';
+  document.getElementById('stumpedJoke').style.display = 'none';
+  loadAndShowFlashcard(best.name, bestPct);
 }
+
 
 /* ── Multi-guess (tie) flow ─────────────────────── */
 function showMultiGuess() {
@@ -539,17 +620,12 @@ function mgYes() {
   launchConfetti();
   // Swap to result screen celebrating correct guess
   const p = G_tiedCandidates[G_tiedIndex].player;
-  document.getElementById('resName').textContent  = p.name;
-  document.getElementById('resBadge').textContent = `${p.role} · ${p.teams_played}`;
-  document.getElementById('resConf').textContent  = '✅ Correct!';
-  document.getElementById('resConf').style.color  = 'var(--green)';
-  document.getElementById('resConfBar').style.width = '100%';
-  document.getElementById('resTeams').innerHTML   =
-    `Teams: <strong>${p.teams_played.split(',').join(' · ')}</strong>`;
+  const pct = Math.round(G_tiedCandidates[G_tiedIndex].weight * 100) || 90;
   showScreen('result');
-  document.getElementById('resActionsAsk').style.display = 'none';
-  document.getElementById('resActionsDone').style.display = 'flex';
-  document.getElementById('wrongFlow').style.display = 'none';
+  document.getElementById('fcLoading').style.display = 'flex';
+  document.getElementById('flashcard').style.display = 'none';
+  document.getElementById('stumpedJoke').style.display = 'none';
+  loadAndShowFlashcard(p.name, pct);
 }
 
 function mgNo() {
@@ -557,18 +633,93 @@ function mgNo() {
   if (G_tiedIndex < G_tiedCandidates.length) {
     showMultiGuess();
   } else {
-    // All guesses exhausted — show wrong flow
-    document.getElementById('resName').textContent  = '???';
-    document.getElementById('resBadge').textContent = 'The AI is stumped!';
-    document.getElementById('resConf').textContent  = '😵 Stumped';
-    document.getElementById('resConf').style.color  = 'var(--red)';
-    document.getElementById('resConfBar').style.width = '0%';
-    document.getElementById('resTeams').innerHTML   = '';
+    // All guesses exhausted — show stumped screen
     showScreen('result');
-    document.getElementById('resActionsAsk').style.display = 'none';
-    document.getElementById('resActionsDone').style.display = 'none';
-    document.getElementById('wrongFlow').style.display = 'block';
+    document.getElementById('fcLoading').style.display = 'none';
+    document.getElementById('flashcard').style.display = 'none';
+    showStumpedScreen();
   }
+}
+
+async function showStumpedScreen() {
+  document.getElementById('stumpedJoke').style.display = 'block';
+  document.getElementById('sjText').textContent = "Generating excuse...";
+  try {
+    const res = await fetch('http://localhost:3000/api/joke', { method: 'POST' });
+    const data = await res.json();
+    document.getElementById('sjText').textContent = `"${data.joke}"`;
+  } catch(e) {
+    document.getElementById('sjText').textContent = `"I guess my AI circuits got tangled in the spin! You stumped me!"`;
+  }
+}
+
+async function submitCorrectionStump() {
+  const raw = document.getElementById('wfInputStump').value.trim();
+  const msg = document.getElementById('wfMsgStump');
+  const compBox = document.getElementById('comparisonBoxStump');
+  if(!raw) {
+    msg.className = 'wf-msg info';
+    msg.textContent = 'Please enter a name first!';
+    msg.style.display = 'block';
+    return;
+  }
+  
+  msg.style.display = 'none';
+  if (compBox) compBox.style.display = 'none';
+
+  // Save correction log
+  saveCorrection("STUMPED", raw, G.history);
+
+  const existing = findPlayerByName(PLAYERS, raw);
+
+  if (existing) {
+    msg.className   = 'wf-msg info';
+    msg.textContent = `ℹ️  "${existing.name}" is already in our database! Here is where we disagreed:`;
+    msg.style.display = 'block';
+
+    if (compBox) {
+        let compHtml = `<div class="comp-title">Answers comparison for ${existing.name}</div><div class="comp-grid">`;
+        G.history.forEach((h, idx) => {
+            const attrObj = ATTRIBUTES.find(a => a.key === h.attr);
+            const attrLabel = attrObj ? attrObj.label : h.attr;
+            const dbVal = getAttrValue(existing, h.attr);
+            const dbRespStr = dbVal ? "Yes" : "No";
+            const userRespStr = h.resp === 'dk' ? "Don't Know" : h.resp.charAt(0).toUpperCase() + h.resp.slice(1);
+            
+            let isMatch = false;
+            if (h.resp === 'yes' && dbVal) isMatch = true;
+            if (h.resp === 'no' && !dbVal) isMatch = true;
+            if (h.resp === 'maybe' || h.resp === 'dk') isMatch = true;
+            
+            compHtml += `<div class="comp-row ${isMatch ? 'match' : 'mismatch'}">
+                <div class="comp-attr">Q${idx+1}: Is the player ${attrLabel}?</div>
+                <div class="comp-vals">
+                    <span class="comp-user">You said: <b>${userRespStr}</b></span>
+                    <span class="comp-db">DB says: <b>${dbRespStr}</b></span>
+                </div>
+            </div>`;
+        });
+        compHtml += `</div>`;
+        compBox.innerHTML = compHtml;
+        compBox.style.display = 'block';
+    }
+  } else {
+    msg.className   = 'wf-msg info';
+    msg.textContent = `⏳ Adding "${raw}" to the database using Gemini AI… please wait.`;
+    msg.style.display = 'block';
+    
+    try {
+      const newPlayer = await addNewPlayerToDB(PLAYERS, raw);
+      PLAYERS = getRuntimePlayers();
+      msg.className   = 'wf-msg ok';
+      msg.textContent = `✅ "${newPlayer.name}" has been added to the database (${PLAYERS.length} players total)!`;
+    } catch (e) {
+      msg.className   = 'wf-msg info';
+      msg.textContent = `⚠️ Could not auto-generate data for "${raw}". Queued for review.`;
+    }
+  }
+  updateDBSizeUI();
+  document.getElementById('wfInputStump').value = '';
 }
 
 function handleCorrect() {
@@ -591,7 +742,7 @@ async function submitCorrection() {
   const compBox = document.getElementById('comparisonBox');
   if (!raw) return;
 
-  const guessed = document.getElementById('resName').textContent;
+  const guessed = document.getElementById('fcName').textContent;
   msg.style.display = 'none';
   if (compBox) compBox.style.display = 'none';
 
@@ -855,6 +1006,12 @@ function launchConfetti() {
   ticker.innerHTML += ticker.innerHTML;
   step();
 })();
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+<script>
+  VanillaTilt.init(document.querySelectorAll(".pitch-hero"), { max: 3, speed: 400, glare: true, "max-glare": 0.1 });
+  VanillaTilt.init(document.querySelectorAll(".feat-card"), { max: 10, speed: 300, glare: true, "max-glare": 0.15 });
 </script>
 </body>
 </html>

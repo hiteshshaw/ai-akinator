@@ -7,21 +7,131 @@
 const BACKEND_URL = "http://localhost:3000";
 
 const FALLBACK_QUESTIONS = {
-  overseas:              "Is your player from outside India — an overseas international?",
-  captain:               "Has your player ever captained an IPL franchise?",
-  active:                "Is your player still playing in the IPL today?",
-  wicketkeeper:          "Does your player keep wickets — gloves and all?",
-  opener:                "Does your player open the batting at the top of the order?",
-  finisher:              "Is your player the go-to finisher who smashes sixes in the final overs?",
-  spinner:               "Does your player bowl spin — leg-spin or off-spin?",
-  pace_bowler:           "Does your player bowl pace — fast and aggressive?",
-  aggressive:            "Is your player known for explosive, aggressive batting?",
-  death_bowler:          "Is your player a specialist death-over bowler?",
-  played_multiple_teams: "Has your player worn the jersey of more than one IPL team?",
-  played_defunct_team:   "Has your player played for a defunct IPL team like Deccan, GL, RPS, or PWI?",
-  role_bat:              "Is your player primarily a specialist batsman?",
-  role_bowl:             "Is your player primarily a specialist bowler?",
-  role_ar:               "Is your player a true all-rounder — bats AND bowls regularly?",
+  overseas: [
+    "Is your player from outside India — an overseas international?",
+    "Does this player take up an overseas slot in the playing XI?",
+    "Is your player a foreign recruit in the IPL?"
+  ],
+  captain: [
+    "Has your player ever captained an IPL franchise?",
+    "Has he successfully led a team to the playoffs or a title?",
+    "Has this player ever taken on the leadership duties for an IPL team?"
+  ],
+  active: [
+    "Is your player still playing in the IPL today?",
+    "Is this cricketer currently an active player in the IPL?",
+    "Did this player participate in recent IPL seasons?"
+  ],
+  wicketkeeper: [
+    "Does your player keep wickets — gloves and all?",
+    "Is your player a designated wicket-keeper batsman?",
+    "Has your player regularly stood behind the stumps in the IPL?"
+  ],
+  opener: [
+    "Does your player open the batting at the top of the order?",
+    "Is this player known for facing the new ball in the first over?",
+    "Does your player walk out to bat as an opener?"
+  ],
+  finisher: [
+    "Is your player the go-to finisher who smashes sixes in the final overs?",
+    "Does your player typically bat in the lower-middle order to close out innings?",
+    "Is this player known as a death-overs batting specialist?"
+  ],
+  spinner: [
+    "Does your player bowl spin — leg-spin or off-spin?",
+    "Is your player a slow bowler who relies on spin and flight?",
+    "Does this player belong to the spin bowling department?"
+  ],
+  pace_bowler: [
+    "Does your player bowl pace — fast and aggressive?",
+    "Is this player a fast bowler who runs in hard to bowl?",
+    "Does your player regularly bowl at high speeds as a pacer?"
+  ],
+  aggressive: [
+    "Is your player known for explosive, aggressive batting?",
+    "Does this player have a reputation for hitting big sixes and playing aggressively?",
+    "Is your player considered a destructive power-hitter?"
+  ],
+  death_bowler: [
+    "Is your player a specialist death-over bowler?",
+    "Does this player regularly bowl in the crucial final overs of an innings?",
+    "Is this bowler trusted by the captain to bowl at the death?"
+  ],
+  played_multiple_teams: [
+    "Has your player worn the jersey of more than one IPL team?",
+    "Has this player been traded or bought by multiple franchises over their career?",
+    "Has your player represented at least two different IPL teams?"
+  ],
+  played_defunct_team: [
+    "Has your player played for a defunct IPL team like Deccan, GL, RPS, or PWI?",
+    "Did this player ever represent an IPL franchise that no longer exists?",
+    "Has this player been part of a former team like Kochi Tuskers or Gujarat Lions?"
+  ],
+  role_bat: [
+    "Is your player primarily a specialist batsman?",
+    "Is this player known mainly for their batting contributions?",
+    "Does this player play as a pure batter in the team?"
+  ],
+  role_bowl: [
+    "Is your player primarily a specialist bowler?",
+    "Does this player feature in the team primarily for their bowling?",
+    "Is your player a dedicated main-line bowler?"
+  ],
+  role_ar: [
+    "Is your player a true all-rounder — bats AND bowls regularly?",
+    "Does this player contribute significantly with both bat and ball?",
+    "Is your player classified as an all-rounder?"
+  ],
+  team_csk: [
+    "Has your player ever worn the yellow jersey for Chennai Super Kings (CSK)?",
+    "Did this player ever play under the CSK banner?",
+    "Has your player been a part of the Chennai Super Kings squad?"
+  ],
+  team_mi: [
+    "Has your player ever played for the Mumbai Indians (MI)?",
+    "Did this player ever represent the blue and gold of Mumbai Indians?",
+    "Has this player been part of the MI setup?"
+  ],
+  team_rcb: [
+    "Has your player ever been part of the Royal Challengers Bangalore (RCB) squad?",
+    "Did this player ever play at the Chinnaswamy for RCB?",
+    "Has your player represented the Royal Challengers Bangalore?"
+  ],
+  team_kkr: [
+    "Has your player ever represented the Kolkata Knight Riders (KKR)?",
+    "Did this player ever wear the purple and gold for KKR?",
+    "Has this player been part of the Kolkata Knight Riders?"
+  ],
+  team_srh: [
+    "Has your player ever played for the Sunrisers Hyderabad (SRH)?",
+    "Did this player ever represent the Orange Army (SRH)?",
+    "Has this player been a member of the Sunrisers Hyderabad squad?"
+  ],
+  team_rr: [
+    "Has your player ever played for the Rajasthan Royals (RR)?",
+    "Did this player ever wear the pink or blue for Rajasthan Royals?",
+    "Has your player been part of the inaugural champions, Rajasthan Royals?"
+  ],
+  team_dc: [
+    "Has your player ever represented the Delhi franchise (Capitals or Daredevils)?",
+    "Did this player ever play for Delhi Capitals or Delhi Daredevils?",
+    "Has this player been part of the Delhi-based IPL team?"
+  ],
+  team_pbks: [
+    "Has your player ever played for the Punjab franchise (Kings or KXIP)?",
+    "Did this player ever represent Punjab Kings or Kings XI Punjab?",
+    "Has your player been a part of the Punjab IPL squad?"
+  ],
+  team_gt: [
+    "Has your player ever played for the Gujarat Titans (GT)?",
+    "Did this player ever win or play for the Gujarat Titans?",
+    "Has this player been part of the GT setup?"
+  ],
+  team_lsg: [
+    "Has your player ever been part of the Lucknow Super Giants (LSG)?",
+    "Did this player ever play for the Lucknow franchise?",
+    "Has this player represented the Lucknow Super Giants?"
+  ]
 };
 
 async function generateQuestion(attrKey, attrLabel, topNames, candidateCount, questionNum) {
@@ -42,9 +152,11 @@ async function generateQuestion(attrKey, attrLabel, topNames, candidateCount, qu
 
 Your tone/style for THIS question ONLY: ${style}
 
-Context: Question ${questionNum} of 12. Current suspects: ${topNames}. Players remaining: ${candidateCount}.
+Context: Question ${questionNum} of 12+. Current suspects: ${topNames}. Players remaining: ${candidateCount}.
 
 STRICT RULES:
+- The question must be highly dynamic and unique. Do NOT repeat standard or robotic question formats.
+- Change up the phrasing and sentence structure completely every time.
 - ONE sentence only, maximum 18 words
 - Must be a yes/no question (end with ?)
 - NEVER mention a player's name
@@ -63,7 +175,11 @@ STRICT RULES:
   } catch (e) {
     console.warn("[Brain] Backend unavailable, using fallback:", e.message);
   }
-  return FALLBACK_QUESTIONS[attrKey] || `Is this player known for: ${attrLabel}?`;
+  const fallbacks = FALLBACK_QUESTIONS[attrKey];
+  if (fallbacks && fallbacks.length > 0) {
+    return fallbacks[Math.floor(Math.random() * fallbacks.length)];
+  }
+  return `Is this player known for: ${attrLabel}?`;
 }
 
 /* ── Database helpers (localStorage-backed) ─────────────────────────── */
